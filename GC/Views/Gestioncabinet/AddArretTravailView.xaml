@@ -8,6 +8,7 @@
         xmlns:serialization="clr-namespace:DevExpress.Xpf.LayoutControl.Serialization;assembly=DevExpress.Xpf.LayoutControl.v15.2"
         xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
         xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+         dx:ThemeManager.ThemeName="VS2010"
         Title="AddArretTravailView">
     <Grid Background="White">
         <DockPanel>

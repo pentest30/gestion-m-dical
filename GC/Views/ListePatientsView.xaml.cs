@@ -46,7 +46,7 @@ namespace GC.Views
                 "Consultations", 
                 "ArretTravails",
                 "InterventionChirurgicaux"};
-            GridControl.ItemsSource = _repository.QueryWith(parm).ToList();
+            GridControl.ItemsSource = _repository.QueryWith(parm).Take(5).ToList();
             GridControl.View.FocusedRowHandle = _selecteditem;
         }
 
