@@ -1,0 +1,54 @@
+﻿<dxr:DXRibbonWindow x:Class="GC.Views.Parametres.AddEditAnrecedentsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+             xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+             xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+             xmlns:helpers="clr-namespace:WPF.Core.Helpers;assembly=WPF.Core"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+           >
+    <Grid Background="White">
+        <DockPanel>
+            <dxr:RibbonControl RibbonStyle="Office2010" DockPanel.Dock="Top" AllowCustomization="False">
+                <dxr:RibbonDefaultPageCategory Caption="defaultCategory">
+                    <dxr:RibbonPage Caption="Home">
+                        <dxr:RibbonPageGroup >
+                            <dxb:BarButtonItem Content="Enregistrer et continuer" x:Name="AddContinuBtn" ItemClick="AddContinuBtn_OnItemClick" LargeGlyph="{dx:DXImage Image=SaveAndNew_32x32.png}" Glyph="{dx:DXImage Image=SaveAndNew_16x16.png}"/>
+                            <dxb:BarItemSeparator/>
+
+                            <dxb:BarButtonItem Content="Enregistrer et fermer" x:Name="AddCloseBtn"  ItemClick="AddCloseBtn_OnItemClick" LargeGlyph="{dx:DXImage Image=SaveAndClose_32x32.png}" Glyph="{dx:DXImage Image=SaveAndClose_16x16.png}"/>
+                            <dxb:BarItemSeparator/>
+                            <dxb:BarButtonItem Content="Fermer" x:Name="CloseBtn" ItemClick="CloseBtn_OnItemClick" LargeGlyph="{dx:DXImage Image=Close_32x32.png}" Glyph="{dx:DXImage Image=Close_16x16.png}"/>
+                        </dxr:RibbonPageGroup>
+
+                    </dxr:RibbonPage>
+                </dxr:RibbonDefaultPageCategory>
+            </dxr:RibbonControl>
+            <Grid>
+                <dxlc:LayoutControl>
+                    <dxlc:LayoutGroup Header="Antécédent" View="GroupBox"  Orientation="Vertical">
+                        <dxlc:LayoutItem Label="Libelle">
+                            <dxe:TextEdit CharacterCasing="Upper" EditValue="{Binding Libelle, UpdateSourceTrigger=PropertyChanged ,Mode=TwoWay}"/>
+
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Type d'antécédent">
+                            <helpers:AutoFilteredComboBox Margin="2" 
+                    			x:Name="CbCategorie" 
+					
+                    			DisplayMemberPath="Name"
+                    			SelectedValue="{Binding TypeAntecedent, UpdateSourceTrigger=PropertyChanged ,Mode=TwoWay}" 
+                    			SelectedValuePath="Name"
+						/>
+                        </dxlc:LayoutItem>
+                        
+                            </dxlc:LayoutGroup>
+                </dxlc:LayoutControl>
+            </Grid>
+        </DockPanel>
+
+    </Grid>
+</dxr:DXRibbonWindow>

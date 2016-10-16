@@ -1,0 +1,68 @@
+﻿<dxr:DXRibbonWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+  
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+     dx:ThemeManager.ThemeName="VS2010"
+    x:Class="GC.Views.Gestioncabinet.AddTraitement"
+        Title="AddTraitement" >
+    <Grid>
+        <DockPanel>
+            <dxr:RibbonControl RibbonStyle="Office2010" DockPanel.Dock="Top" AllowCustomization="False">
+                <dxr:RibbonDefaultPageCategory Caption="defaultCategory">
+                    <dxr:RibbonPage Caption="Home">
+                        <dxr:RibbonPageGroup Caption="Traitement Tasks">
+                            <dxb:BarButtonItem Content="Save" Name="SaveCommand" ItemClick="SaveCommand_OnItemClick" LargeGlyph="{dx:DXImage Image=Save_32x32.png}" Glyph="{dx:DXImage Image=Save_16x16.png}"/>
+                            <dxb:BarButtonItem Content="Save And Close" Name="SaveAndCloseCommand" ItemClick="SaveAndCloseCommand_OnItemClick" LargeGlyph="{dx:DXImage Image=SaveAndClose_32x32.png}" Glyph="{dx:DXImage Image=SaveAndClose_16x16.png}"/>
+                            <dxb:BarButtonItem Content="Save And New" Name="SaveAndNewCommand" ItemClick="SaveAndNewCommand_OnItemClick" LargeGlyph="{dx:DXImage Image=SaveAndNew_32x32.png}" Glyph="{dx:DXImage Image=SaveAndNew_16x16.png}"/>
+                            <dxb:BarButtonItem Content="Reset Changes" Command="{Binding ResetCommand}" LargeGlyph="{dx:DXImage Image=Reset_32x32.png}" Glyph="{dx:DXImage Image=Reset_16x16.png}"/>
+                            <dxb:BarButtonItem Content="Close" Command="{Binding CloseCommand}" LargeGlyph="{dx:DXImage Image=Close_32x32.png}" Glyph="{dx:DXImage Image=Close_16x16.png}"/>
+                        </dxr:RibbonPageGroup>
+
+                    </dxr:RibbonPage>
+                </dxr:RibbonDefaultPageCategory>
+            </dxr:RibbonControl>
+            <dxr:RibbonStatusBarControl DockPanel.Dock="Bottom"/>
+            <Grid>
+
+                <dxlc:LayoutControl x:Name="layoutControl" Orientation="Vertical" >
+
+                    <dxlc:LayoutGroup Header="Traitement" View="GroupBox">
+                        <dxlc:LayoutGroup Header="Traitement:" Orientation="Vertical">
+                            <dxlc:LayoutItem Label="Médicament" x:Name="layoutItemMedicament">
+                                <dxg:LookUpEdit 
+                                    Name="CbMedicament"
+                        			EditValue="{Binding MedicamentId, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, Mode=TwoWay}"
+                        			ValueMember="Id"
+                        			DisplayMember="NomCommercial"
+                        			IsTextEditable="False"
+                        			AllowUpdateTwoWayBoundPropertiesOnSynchronization="False">
+                                    <dxg:LookUpEdit.PopupContentTemplate>
+                                        <ControlTemplate TargetType="{x:Type ContentControl}">
+                                            <dxg:GridControl x:Name="PART_GridControl" ShowBorder="False" ShowLoadingPanel="{Binding LookUpMedicaments.IsLoading}" >
+                                                <dxg:GridControl.View>
+                                                    <dxg:TableView ShowAutoFilterRow="True"/>
+                                                </dxg:GridControl.View>
+                                            </dxg:GridControl>
+                                        </ControlTemplate>
+                                    </dxg:LookUpEdit.PopupContentTemplate>
+                                </dxg:LookUpEdit>
+                            </dxlc:LayoutItem>
+                            <dxlc:DataLayoutItem Label="Qnt">
+                                <dxe:TextEdit EditValue="{Binding Path=Qnt, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Mask="n" MaskType="Numeric" Text="1"/>
+                            </dxlc:DataLayoutItem>
+                            <dxlc:DataLayoutItem Label="N° par jours">
+                                <dxe:TextEdit Mask="n" MaskType="Numeric" EditValue="{Binding Path=NbrJours, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Text="1"/>
+                            </dxlc:DataLayoutItem>
+                        </dxlc:LayoutGroup>
+                    </dxlc:LayoutGroup>
+                </dxlc:LayoutControl>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</dxr:DXRibbonWindow>

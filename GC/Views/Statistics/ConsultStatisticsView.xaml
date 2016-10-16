@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="GC.Views.Statistics.ConsultStatisticsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+       <StackPanel Orientation="Horizontal">
+           <Label FontSize="13" Margin="2,5,0,0">Filtrer par date: </Label>
+            <dxe:DateEdit x:Name="edit" HorizontalAlignment="Left" Width="280" Margin="3" EditValueChanged="edit_EditValueChanged"  />
+       </StackPanel>
+
+        <dxg:GridControl Grid.Row="1"
+									
+									SelectedItemChanged="DataGrid_OnSelectedItemChanged"
+									
+			
+									MaxHeight="2000"
+									Margin="5" ItemsSource="{Binding Consultations, UpdateSourceTrigger=PropertyChanged}"
+									x:Name="DataGrid">
+           
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn Width="250"  Header="Date" Binding="{Binding DateConsultation}"/>
+                <dxg:GridColumn Width="200"  Header="Nom  " Binding="{Binding DossierPatient.Nom}"/>
+                <dxg:GridColumn Width="200"  Header="Prénom  " Binding="{Binding DossierPatient.Prenom}"/>
+            </dxg:GridControl.Columns>
+
+            <dxg:GridControl.View>
+                <dxg:TableView AutoWidth="True" ShowFixedTotalSummary="True"/>
+            </dxg:GridControl.View>
+            <dxg:GridControl.TotalSummary>
+                <dxg:GridSummaryItem Alignment="Left" SummaryType="Count" />
+            </dxg:GridControl.TotalSummary>
+        </dxg:GridControl>
+    </Grid>
+</UserControl>

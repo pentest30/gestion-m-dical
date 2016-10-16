@@ -1,0 +1,337 @@
+﻿<UserControl xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:sparrow="http://sparrowtoolkit.codeplex.com/wpf"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+             xmlns:MV="clr-namespace:GC.MV"
+             xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns:Serialization="clr-namespace:DevExpress.Xpf.LayoutControl.Serialization;assembly=DevExpress.Xpf.LayoutControl.v15.2"
+             xmlns:dd="urn:gong-wpf-dragdrop"
+             x:Class="GC.Views.GraphView"
+             mc:Ignorable="d" 
+           
+             >
+
+    <ScrollViewer>
+        <DockPanel >
+            <dxb:ToolBarControl DockPanel.Dock="Bottom" Margin="5">
+                <dxb:BarButtonItem  BarItemDisplayMode="ContentAndGlyph" Content="Sauvegarder" x:Name="AddItem"   LargeGlyph="{dx:DXImage Image=Export_32x32.png}" Glyph="{dx:DXImage Image=Export_16x16.png}" />
+                <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Imprimer" x:Name="OrdBtn" ItemClick="ButtonBase_OnClick"  LargeGlyph="{dx:DXImage Image=PrinterNetwork_32x32.png}" Glyph="{dx:DXImage Image=PrinterNetwork_16x16.png}" />
+            </dxb:ToolBarControl>
+
+            <dxlc:LayoutGroup DockPanel.Dock="Top" Header="Patient en cours:" View="GroupBox" Margin="5">
+                <dxlc:LayoutControl Orientation="Vertical">
+                    <dxlc:LayoutGroup dx:ScrollViewerTouchBehavior.IsEnabled="True" Serialization:SerializableItem.TypeName="LayoutGroup">
+                        <dxlc:LayoutGroup dx:ScrollViewerTouchBehavior.IsEnabled="True" Orientation="Vertical" Serialization:SerializableItem.TypeName="LayoutGroup">
+
+                            <dxlc:LayoutItem Label="Nom">
+                                <dxe:TextEdit IsReadOnly="True" EditValue="{Binding Nom}"/>
+
+                            </dxlc:LayoutItem>
+                            <dxlc:LayoutItem Label="Age">
+                                <dxe:TextEdit IsReadOnly="True" EditValue="{Binding Age}"/>
+
+                            </dxlc:LayoutItem>
+                        </dxlc:LayoutGroup>
+                        <dxlc:LayoutGroup dx:ScrollViewerTouchBehavior.IsEnabled="True" Orientation="Vertical" Serialization:SerializableItem.TypeName="LayoutGroup">
+                            <dxlc:LayoutItem Label="Prénom" >
+                                <dxe:TextEdit IsReadOnly="True" EditValue="{Binding Prenom}"/>
+
+                            </dxlc:LayoutItem>
+                            <dxlc:LayoutItem Label="Sexe">
+                                <dxe:TextEdit IsReadOnly="True" EditValue="{Binding Sexe}"/>
+
+                            </dxlc:LayoutItem>
+                        </dxlc:LayoutGroup>
+                    </dxlc:LayoutGroup>
+                    <dxlc:LayoutItem Label="Observation">
+                        <RichTextBox Height="80" >
+                            <FlowDocument>
+                                <Paragraph>
+                                    <Run Name="RichTextBoxObserv" />
+                                </Paragraph>
+                            </FlowDocument>
+                        </RichTextBox>
+                    </dxlc:LayoutItem>
+                </dxlc:LayoutControl>
+            </dxlc:LayoutGroup>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+          
+
+                <StackPanel Grid.Row="1" Grid.Column="0" Margin="10" Name="RightEar">
+                    <StackPanel.DataContext>
+                        <MV:GraphVm/>
+                    </StackPanel.DataContext>
+                    <TextBlock Text="OREILLE DROITE" FontSize="20"/>
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <dxlc:LayoutControl Orientation="Vertical" >
+                                <dxlc:LayoutGroup dx:ScrollViewerTouchBehavior.IsEnabled="True" Serialization:SerializableItem.TypeName="LayoutGroup">
+                                    <dxlc:LayoutItem Width="200" Label="C.O">
+
+                                        <dxe:TextEdit EditValue="{Binding AxisX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MaskType="Numeric" Mask="n0"/>
+
+                                    </dxlc:LayoutItem>
+
+                                    <dxlc:LayoutItem>
+                                        <dxb:ToolBarControl>
+                                            <dxb:BarButtonItem Command="{Binding AddCaItems}"  
+                        					BarItemDisplayMode="ContentAndGlyph" 
+                        					Content="Ajouter"   
+                        					Glyph="{dx:DXImage Image=Add_16x16.png}" />
+                                            <dxb:BarButtonItem Command="{Binding DellCaCommand}"  
+                        					BarItemDisplayMode="ContentAndGlyph" 
+                        					Content="Annuler"   
+                        					Glyph="{dx:DXImage Image=Cancel_16x16.png}"/>
+
+
+                                        </dxb:ToolBarControl>
+                                    </dxlc:LayoutItem>
+                                </dxlc:LayoutGroup>
+                                <dxlc:LayoutGroup dx:ScrollViewerTouchBehavior.IsEnabled="True" Serialization:SerializableItem.TypeName="LayoutGroup">
+
+
+                                    <dxlc:LayoutItem Width="200" Label="C.A">
+
+                                        <dxe:TextEdit EditValue="{Binding AxisXCo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MaskType="Numeric" Mask="n0"/>
+
+                                    </dxlc:LayoutItem>
+
+                                    <dxlc:LayoutItem>
+                                        <dxb:ToolBarControl >
+                                            <dxb:BarButtonItem Command="{Binding AddItemCoCommand}"  
+                            				BarItemDisplayMode="ContentAndGlyph" 
+                            				Content="Ajouter"   
+                            				Glyph="{dx:DXImage Image=Add_16x16.png}" />
+                                            <dxb:BarButtonItem Command="{Binding DellCoCommand}"  
+                        					BarItemDisplayMode="ContentAndGlyph" 
+                        					Content="Annuler"   
+                        					Glyph="{dx:DXImage Image=Cancel_16x16.png}"/>
+
+                                        </dxb:ToolBarControl>
+                                    </dxlc:LayoutItem>
+
+                                </dxlc:LayoutGroup>
+
+                            </dxlc:LayoutControl>
+
+                        </StackPanel>
+                    </StackPanel>
+                    <dxc:ChartControl MouseLeftButtonDown="ChartControl1_OnMouseLeftButtonDown" x:Name="chartControl1" >
+                        <dxc:ChartControl.Legend>
+                            <dxc:Legend />
+                        </dxc:ChartControl.Legend>
+                        <dxc:XYDiagram2D>
+                            <dxc:XYDiagram2D.AxisX>
+                                <dxc:AxisX2D>
+                                    <dxc:AxisX2D.WholeRange>
+                                        <dxc:Range>
+                                            <dxc:Range.MaxValue>
+                                                <System:Double>8000</System:Double>
+                                            </dxc:Range.MaxValue>
+                                            <dxc:Range.MinValue>
+                                                <System:Double>0</System:Double>
+                                            </dxc:Range.MinValue>
+                                        </dxc:Range>
+                                    </dxc:AxisX2D.WholeRange>
+                                    <dxc:AxisX2D.VisualRange>
+                                        <dxc:Range>
+                                            <dxc:Range.MaxValue>
+                                                <System:Double>8000</System:Double>
+                                            </dxc:Range.MaxValue>
+                                            <dxc:Range.MinValue>
+                                                <System:Decimal>0</System:Decimal>
+                                            </dxc:Range.MinValue>
+                                        </dxc:Range>
+                                    </dxc:AxisX2D.VisualRange>
+                                </dxc:AxisX2D>
+                            </dxc:XYDiagram2D.AxisX>
+                            <dxc:XYDiagram2D.AxisY>
+                                <dxc:AxisY2D>
+                                    <dxc:AxisY2D.WholeRange>
+                                        <dxc:Range>
+                                            <dxc:Range.MaxValue>
+                                                <System:Decimal>10</System:Decimal>
+                                            </dxc:Range.MaxValue>
+                                            <dxc:Range.MinValue>
+                                                <System:Decimal>-110</System:Decimal>
+                                            </dxc:Range.MinValue>
+                                        </dxc:Range>
+                                    </dxc:AxisY2D.WholeRange>
+                                    <dxc:AxisY2D.VisualRange>
+                                        <dxc:Range>
+                                            <dxc:Range.MaxValue>
+                                                <System:Decimal>10</System:Decimal>
+                                            </dxc:Range.MaxValue>
+                                            <dxc:Range.MinValue>
+                                                <System:Decimal>-110</System:Decimal>
+                                            </dxc:Range.MinValue>
+                                        </dxc:Range>
+                                    </dxc:AxisY2D.VisualRange>
+                                </dxc:AxisY2D>
+                            </dxc:XYDiagram2D.AxisY>
+
+                            <dxc:LineSeries2D DataSource="{Binding Sources, UpdateSourceTrigger=PropertyChanged}"  DisplayName="C.O" MarkerVisible="False"  ValueDataMember="Argument" ArgumentDataMember="Value"/>
+                            <dxc:LineSeries2D DataSource="{Binding SourcesLeft, UpdateSourceTrigger=PropertyChanged}"   DisplayName="C.A" MarkerVisible="False"  ValueDataMember="Argument" ArgumentDataMember="Value"/>
+                        </dxc:XYDiagram2D>
+                    </dxc:ChartControl>
+                </StackPanel>
+                <StackPanel Name="LeftEar" Margin="10" Grid.Row="1" Grid.Column="1">
+                    <StackPanel.DataContext>
+                        <MV:GraphVmGauche/>
+                    </StackPanel.DataContext>
+                    <TextBlock Text="OREILLE GAUCHE" FontSize="20"/>
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <dxlc:LayoutControl Orientation="Vertical" >
+                                <dxlc:LayoutGroup dx:ScrollViewerTouchBehavior.IsEnabled="True" Serialization:SerializableItem.TypeName="LayoutGroup">
+                                    <dxlc:LayoutItem Width="200" Label="C.O">
+
+                                        <dxe:TextEdit EditValue="{Binding AxisX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MaskType="Numeric" Mask="n0"/>
+
+                                    </dxlc:LayoutItem>
+
+                                    <dxlc:LayoutItem>
+                                        <dxb:ToolBarControl>
+                                            <dxb:BarButtonItem Command="{Binding AddCaItems}"  
+                        					BarItemDisplayMode="ContentAndGlyph" 
+                        					Content="Ajouter"   
+                        					Glyph="{dx:DXImage Image=Add_16x16.png}" />
+                                            <dxb:BarButtonItem Command="{Binding DellCaCommand}"  
+                        					BarItemDisplayMode="ContentAndGlyph" 
+                        					Content="Annuler"   
+                        					Glyph="{dx:DXImage Image=Cancel_16x16.png}"/>
+
+                                        </dxb:ToolBarControl>
+                                    </dxlc:LayoutItem>
+                                </dxlc:LayoutGroup>
+                                <dxlc:LayoutGroup dx:ScrollViewerTouchBehavior.IsEnabled="True" Serialization:SerializableItem.TypeName="LayoutGroup">
+
+
+                                    <dxlc:LayoutItem Width="200" Label="C.A">
+
+                                        <dxe:TextEdit EditValue="{Binding AxisXCo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MaskType="Numeric" Mask="n0"/>
+
+                                    </dxlc:LayoutItem>
+
+                                    <dxlc:LayoutItem>
+                                        <dxb:ToolBarControl >
+                                            <dxb:BarButtonItem Command="{Binding AddItemCoCommand}"  
+                            				BarItemDisplayMode="ContentAndGlyph" 
+                            				Content="Ajouter"   
+                            				Glyph="{dx:DXImage Image=Add_16x16.png}" />
+                                            <dxb:BarButtonItem Command="{Binding DellCoCommand}"  
+                        					BarItemDisplayMode="ContentAndGlyph" 
+                        					Content="Annuler"   
+                        					Glyph="{dx:DXImage Image=Cancel_16x16.png}"/>
+
+                                        </dxb:ToolBarControl>
+                                    </dxlc:LayoutItem>
+
+                                </dxlc:LayoutGroup>
+
+                            </dxlc:LayoutControl>
+
+                        </StackPanel>
+                    </StackPanel>
+
+                    <dxc:ChartControl x:Name="chartControl12">
+                        <dxc:ChartControl.Legend>
+                            <dxc:Legend />
+                        </dxc:ChartControl.Legend>
+                        <dxc:XYDiagram2D>
+                            <dxc:XYDiagram2D.AxisX>
+                                <dxc:AxisX2D>
+                                    <dxc:AxisX2D.WholeRange>
+                                        <dxc:Range>
+                                            <dxc:Range.MaxValue>
+                                                <System:Double>8000</System:Double>
+                                            </dxc:Range.MaxValue>
+                                            <dxc:Range.MinValue>
+                                                <System:Double>0</System:Double>
+                                            </dxc:Range.MinValue>
+                                        </dxc:Range>
+                                    </dxc:AxisX2D.WholeRange>
+                                    <dxc:AxisX2D.VisualRange>
+                                        <dxc:Range>
+                                            <dxc:Range.MaxValue>
+                                                <System:Double>8000</System:Double>
+                                            </dxc:Range.MaxValue>
+                                            <dxc:Range.MinValue>
+                                                <System:Double>0</System:Double>
+                                            </dxc:Range.MinValue>
+                                        </dxc:Range>
+                                    </dxc:AxisX2D.VisualRange>
+                                </dxc:AxisX2D>
+                            </dxc:XYDiagram2D.AxisX>
+                            <dxc:XYDiagram2D.AxisY>
+                                <dxc:AxisY2D>
+                                    <dxc:AxisY2D.WholeRange>
+                                        <dxc:Range>
+                                            <dxc:Range.MaxValue>
+                                                <System:Double>10</System:Double>
+                                            </dxc:Range.MaxValue>
+                                            <dxc:Range.MinValue>
+                                                <System:Double>-110</System:Double>
+                                            </dxc:Range.MinValue>
+                                        </dxc:Range>
+                                    </dxc:AxisY2D.WholeRange>
+                                    <dxc:AxisY2D.VisualRange>
+                                        <dxc:Range>
+                                            <dxc:Range.MaxValue>
+                                                <System:Decimal>10</System:Decimal>
+                                            </dxc:Range.MaxValue>
+                                            <dxc:Range.MinValue>
+                                                <System:Decimal>-110</System:Decimal>
+                                            </dxc:Range.MinValue>
+                                        </dxc:Range>
+                                    </dxc:AxisY2D.VisualRange>
+                                </dxc:AxisY2D>
+                            </dxc:XYDiagram2D.AxisY>
+                            <dxc:LineSeries2D DataSource="{Binding Sources, UpdateSourceTrigger=PropertyChanged}"  DisplayName="C.O" MarkerVisible="False"  ValueDataMember="Argument" ArgumentDataMember="Value"/>
+                            <dxc:LineSeries2D DataSource="{Binding SourcesLeft, UpdateSourceTrigger=PropertyChanged}"   DisplayName="C.A" MarkerVisible="False"  ValueDataMember="Argument" ArgumentDataMember="Value"/>
+
+                        </dxc:XYDiagram2D>
+                    </dxc:ChartControl>
+                </StackPanel>
+                <dxlc:LayoutGroup Margin="5" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" View="GroupBox" Header="WEBER">
+                    <Grid Grid.Column="0" Height="100" HorizontalAlignment="Left"  Name="grid1" 
+          VerticalAlignment="Top" Width="200" ShowGridLines="True" >
+
+
+                        <ListBox Margin="5" Name="ListBox" AllowDrop="True" PreviewMouseLeftButtonDown="UIElement_OnPreviewMouseLeftButtonDown"/>
+
+                    </Grid>
+                    <DataGrid Name="ListView" Margin="5" Grid.Column="1" AllowDrop="True"  Drop="MydropEvent">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Val1 ,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="100" Header="250"/>
+                            <DataGridTextColumn Binding="{Binding Val2,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="100" Header="500"/>
+                            <DataGridTextColumn Binding="{Binding Val3,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="100" Header="1000"/>
+                            <DataGridTextColumn Binding="{Binding Val4,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="100" Header="2000"/>
+                            <DataGridTextColumn Binding="{Binding Val5,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="100" Header="4000"/>
+                            <DataGridTextColumn Binding="{Binding Val6,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="100" Header="8000"/>
+                        </DataGrid.Columns>
+
+                    </DataGrid>
+            
+
+
+                </dxlc:LayoutGroup>
+            </Grid>
+        </DockPanel>
+    </ScrollViewer>
+</UserControl>

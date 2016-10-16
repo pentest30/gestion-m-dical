@@ -1,0 +1,478 @@
+﻿<dxr:DXRibbonWindow
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:uiControls="clr-namespace:UIControls;assembly=UIControls"
+    xmlns:toolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit"
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+    xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+    xmlns:Serialization="clr-namespace:DevExpress.Xpf.LayoutControl.Serialization;assembly=DevExpress.Xpf.LayoutControl.v15.2"
+  
+    x:Class="GC.Views.ConsultationsView"
+    dx:ScrollBarExtensions.AllowMouseScrolling="True"
+    WindowState="Maximized"
+    dx:ThemeManager.ThemeName="VS2010"
+    Height="2100"
+    FontSize="14"
+    Title="Détails patient"
+             mc:Ignorable="d" Loaded="ConsultationsView_OnLoaded" 
+    Icon="/GC;component/Images/stethoscope-icon.png" 
+            >
+
+
+
+    <ScrollViewer>
+        <Grid 
+			ScrollViewer.HorizontalScrollBarVisibility="Auto">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+
+                <RowDefinition Height="2*"/>
+
+                <RowDefinition Height="3*"/>
+
+            </Grid.RowDefinitions>
+            <dxlc:LayoutGroup Header="Dossier en cours:" View="GroupBox" Margin="5">
+                <dxlc:LayoutControl>
+                    <dxlc:LayoutGroup dx:ScrollViewerTouchBehavior.IsEnabled="True" Orientation="Vertical" Serialization:SerializableItem.TypeName="LayoutGroup">
+
+                        <dxlc:LayoutItem Label="Nom">
+                            <dxe:TextEdit IsReadOnly="True" EditValue="{Binding Nom}"/>
+
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Age">
+                            <dxe:TextEdit IsReadOnly="True" EditValue="{Binding Age}"/>
+
+                        </dxlc:LayoutItem>
+                    </dxlc:LayoutGroup>
+                    <dxlc:LayoutGroup dx:ScrollViewerTouchBehavior.IsEnabled="True" Orientation="Vertical" Serialization:SerializableItem.TypeName="LayoutGroup">
+                        <dxlc:LayoutItem Label="Prénom" >
+                            <dxe:TextEdit IsReadOnly="True" EditValue="{Binding Prenom}"/>
+
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Sexe">
+                            <dxe:TextEdit IsReadOnly="True" EditValue="{Binding Sexe}"/>
+
+                        </dxlc:LayoutItem>
+                    </dxlc:LayoutGroup>
+                </dxlc:LayoutControl>
+            </dxlc:LayoutGroup>
+            <TabControl Grid.Row="1" Grid.RowSpan="2">
+                <TabItem Header="Details patient">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+
+                            </Grid.ColumnDefinitions>
+                            <dxlc:LayoutGroup Grid.Column="1" View="GroupBox" Header="Antécédents" Margin="3" >
+                                <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="-5">
+                                    <dxb:ToolBarControl Caption="Allergies">
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" x:Name="AddAntcedItem" ItemClick="AddAntcedItem_OnItemClick" Content="Nouveau" Command="{Binding NewCommand}"  Glyph="{dx:DXImage Image=New_16x16.png}"/>
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" ItemClick="EditCommandAntecedent_OnItemClick" Content="Modifier" x:Name="EditCommandAntecedent" CommandParameter="{Binding SelectedEntity}" Glyph="{dx:DXImage Image=Edit_16x16.png}"/>
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Supprimer" ItemClick="DeleteCommandAntecedent_OnItemClick" x:Name="DeleteCommandAntecedent" CommandParameter="{Binding SelectedEntity}" Glyph="{dx:DXImage Image=Delete_16x16.png}"/>
+                                    </dxb:ToolBarControl>
+                                    <dxlc:LayoutControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                        <dxlc:LayoutGroup Margin="-5">
+                                            <dxg:GridControl Height="200" x:Name="GridControlAntecedent" Margin="3"  ItemsSource="{Binding InterventionChirurgicaux}"  MaxHeight="2000" ShowLoadingPanel="{Binding IsLoading}" >
+                                                <dxg:GridControl.Columns>
+                                                    <dxg:GridColumn Width="250" IsSmart="True" Header="Type" FieldName="TypeAntecedent" />
+                                                    <dxg:GridColumn Width="250" IsSmart="True" Header="Antécedent" FieldName="Libelle" />
+
+                                                </dxg:GridControl.Columns>
+                                                <dxg:GridControl.View>
+                                                    <dxg:TableView  ShowGroupPanel="False"/>
+                                                </dxg:GridControl.View>
+
+
+                                            </dxg:GridControl>
+
+
+
+                                        </dxlc:LayoutGroup>
+                                    </dxlc:LayoutControl>
+                                </StackPanel>
+                            </dxlc:LayoutGroup>
+                            <dxlc:LayoutGroup Grid.Column="0" View="GroupBox" Header="Consultations" Orientation="Vertical"  Margin="3" >
+                                <StackPanel  Orientation="Horizontal"  Height="30">
+                                    <dxb:ToolBarControl >
+                                        <dxb:BarButtonItem  BarItemDisplayMode="ContentAndGlyph" Content="Nouveau" x:Name="AddItem"  ItemClick="AddItem_OnItemClick" Glyph="{dx:DXImage Image=New_16x16.png}"/>
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Modifier" x:Name="EditCommand" ItemClick="EditCommand_OnItemClick" CommandParameter="{Binding SelectedEntity}" Glyph="{dx:DXImage Image=Edit_16x16.png}"/>
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Supprimer" x:Name="DeleteCommand" ItemClick="DeleteCommand_OnItemClick" CommandParameter="{Binding SelectedEntity}" Glyph="{dx:DXImage Image=Delete_16x16.png}"/>
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Ordonnance" x:Name="OrdBtn" ItemClick="OrdBtn_OnItemClick"  Glyph="{dx:DXImage Image=PrinterNetwork_16x16.png}" />
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Bilan" x:Name="BilanBtn" ItemClick="BilanBtn_OnItemClick"  Glyph="{dx:DXImage Image=PrinterNetwork_16x16.png}" />
+                                    </dxb:ToolBarControl>
+                                    <dxe:DateEdit x:Name="edit" Width="180" Margin="3" EditValueChanged="edit_EditValueChanged"  />
+
+
+                                </StackPanel>
+                                <dxg:GridControl 
+									Height="200"
+									SelectedItemChanged="DataGrid_OnSelectedItemChanged"
+									VerticalAlignment="Top"
+			
+									MaxHeight="2000"
+									Margin="5" ItemsSource="{Binding Consultations, UpdateSourceTrigger=PropertyChanged}"
+									x:Name="DataGrid">
+                                    <dxg:GridControl.View>
+                                        <dxg:TableView x:Name="view"  ShowGroupPanel="False"/>
+                                    </dxg:GridControl.View>
+                                    <dxg:GridControl.Columns>
+                                        <dxg:GridColumn Width="250"  Header="Date" Binding="{Binding DateConsultation}"/>
+                                        <dxg:GridColumn Width="280"  Header="Motif de consultation" Binding="{Binding Description}"/>
+
+                                    </dxg:GridControl.Columns>
+
+
+                                </dxg:GridControl>
+                            </dxlc:LayoutGroup>
+
+                        </Grid>
+
+
+
+
+                        <dxlc:LayoutControl Grid.Row="2" Margin="0" Orientation="Vertical">
+                            <dxlc:LayoutGroup Header="Examens cliniques" View="GroupBox">
+
+                                <dxlc:LayoutControl>
+                                    <Grid Margin="-20,-20,0,0">
+                                        <DockPanel>
+                                            <Grid  >
+
+                                                <dxlc:LayoutControl  Orientation="Vertical"  VerticalAlignment="Bottom" >
+                                                    <dxb:ToolBarControl>
+                                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Nouveau" x:Name="SymtNewItem" ItemClick="SymtNewItem_OnItemClick"  Glyph="{dx:DXImage Image=New_32x32.png}" />
+                                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Valider" x:Name="SymtEditItem" ItemClick="SymtEditItem_OnItemClick"   Glyph="{dx:DXImage Image=Apply_16x16.png}" />
+                                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Supprimer" x:Name="DeleteSympItem" ItemClick="DeleteSympItem_OnItemClick"  Glyph="{dx:DXImage Image=Delete_16x16.png}"/>
+                                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Annuler" x:Name="CancelSympItem" ItemClick="CancelSympItem_OnItemClick"  Glyph="{dx:DXImage Image=Cancel_16x16.png}" />
+                                                    </dxb:ToolBarControl>
+                                                    <dxlc:LayoutGroup Name="ExamenCliniqueGrid" Header="Détail:" View="GroupBox" Orientation="Vertical">
+
+                                                        <dxlc:LayoutItem Label="Examen" x:Name="layoutItemSymptome">
+                                                            <toolkit:AutoCompleteBox
+                                                              
+                                                               Name="ExamenCliniqueAutoCompleteBox"
+                    			                                Text="{Binding  Path=Examen ,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    			                              
+                    			                              >
+                                                            </toolkit:AutoCompleteBox>
+                                                        </dxlc:LayoutItem>
+                                                        <dxlc:LayoutItem Label="Diagnostic">
+
+                                                            <dxe:TextEdit CharacterCasing="Upper" EditValue="{Binding Path=Diagnostic, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                                        </dxlc:LayoutItem>
+                                                        <dxlc:DataLayoutItem Label="Observation" Binding="{Binding Observation, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" >
+                                                            <RichTextBox Height="80">
+                                                                <FlowDocument>
+                                                                    <Paragraph>
+                                                                        <Run Text="{Binding Path=Obsevation, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                                                    </Paragraph>
+                                                                </FlowDocument>
+                                                            </RichTextBox>
+                                                        </dxlc:DataLayoutItem>
+                                                    </dxlc:LayoutGroup>
+
+                                                </dxlc:LayoutControl>
+                                            </Grid>
+                                        </DockPanel>
+                                    </Grid>
+                                    <StackPanel DockPanel.Dock="Right" Margin="0">
+
+                                        <dxg:GridControl x:Name="GridControlSymptome" Height="210"  dx:DXSerializer.SerializationID="ConsultationSymptomesConsultsDetailsGrid" SelectedItemChanged="GridControlSymptome_OnSelectedItemChanged"   MaxHeight="2000" ShowLoadingPanel="{Binding IsLoading}">
+
+                                            <dxg:GridControl.Columns>
+                                                <dxg:GridColumn Width="200" Header="Examen" ReadOnly="True" FieldName="Examen" />
+                                                <dxg:GridColumn  Width="250" Header="Diagnostic" ReadOnly="True" FieldName="Diagnostic" />
+                                                <dxg:GridColumn  Width="250" Header="Observation" ReadOnly="True" FieldName="Obsevation" />
+                                            </dxg:GridControl.Columns>
+
+                                            <dxg:GridControl.View>
+                                                <dxg:TableView AllowEditing="False"  AllowPerPixelScrolling="True" ShowGroupPanel="False">
+                                                    <dxg:TableView.RowCellMenuCustomizations>
+                                                        <dxb:BarButtonItem Content="New"   Glyph="{dx:DXImage Image=New_16x16.png}"/>
+                                                        <dxb:BarButtonItem Content="Edit"  Glyph="{dx:DXImage Image=Edit_16x16.png}"/>
+                                                        <dxb:BarButtonItem Content="Delete"   Glyph="{dx:DXImage Image=Delete_16x16.png}"/>
+                                                        <dxb:BarButtonItem Content="Refresh"  Glyph="{dx:DXImage Image=Refresh_16x16.png}"/>
+                                                    </dxg:TableView.RowCellMenuCustomizations>
+                                                </dxg:TableView>
+                                            </dxg:GridControl.View>
+                                        </dxg:GridControl>
+
+                                    </StackPanel>
+                                </dxlc:LayoutControl>
+
+                            </dxlc:LayoutGroup>
+
+                            <dxlc:LayoutGroup View="GroupBox" Header="Examens para-cliniques">
+                                <StackPanel>
+                                    <dxb:ToolBarControl>
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Nouveau" x:Name="NewCommandParaclinique" ItemClick="NewCommandParaclinique_OnItemClick"  Glyph="{dx:DXImage Image=New_16x16.png}"/>
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Valider" x:Name="AnalyseEditItem" ItemClick="AnalyseEditItem_OnItemClick"  Glyph="{dx:DXImage Image=Apply_16x16.png}" />
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Supprimer" x:Name="DeleteAnalyseItem" ItemClick="DeleteAnalyseItem_OnItemClick"  Glyph="{dx:DXImage Image=Delete_16x16.png}"/>
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Annuler" x:Name="CancelAnalyseItem" ItemClick="CancelAnalyseItem_OnItemClick"  Glyph="{dx:DXImage Image=Cancel_16x16.png}" />
+
+                                    </dxb:ToolBarControl>
+                                    <Grid >
+                                        <dxlc:LayoutControl Margin="-10">
+
+                                            <dxlc:LayoutGroup x:Name="ExamenParaCliniqueGrid"  Header="Détail:" View="GroupBox" Orientation="Vertical">
+                                                <dxlc:LayoutItem Label="Type">
+
+                                                    <ComboBox Margin="2" 
+                        		x:Name="CbTypeAnalyse" 
+                                                              SelectionChanged="CbTypeAnalyse_OnSelectionChanged"
+					
+                        		ItemsSource="{Binding Path=ListeExamen, Mode=TwoWay}"
+                        		Text="{Binding Path=TypeExamen, UpdateSourceTrigger=PropertyChanged ,Mode=TwoWay}" 
+                        		
+						/>
+
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="Examen">
+
+                                                    <toolkit:AutoCompleteBox Name="AutoCompleteBoxBilan" Text="{Binding Path=Libelle, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"  />
+
+
+
+                                                </dxlc:LayoutItem>
+                                                <dxlc:DataLayoutItem Label="Remarques" x:Name="LayoutItemDescription" Binding="{Binding Observation, UpdateSourceTrigger=PropertyChanged}" >
+                                                    <RichTextBox Height="80">
+                                                        <FlowDocument>
+                                                            <Paragraph>
+                                                                <Run Text="{Binding Remarques, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                                            </Paragraph>
+                                                        </FlowDocument>
+                                                    </RichTextBox>
+                                                </dxlc:DataLayoutItem>
+                                            </dxlc:LayoutGroup>
+
+
+                                        </dxlc:LayoutControl>
+                                    </Grid>
+                                </StackPanel>
+                                <dxlc:LayoutControl>
+
+                                    <StackPanel Margin="-5">
+
+                                        <dxg:GridControl SelectedItemChanged="GridControlAnalyse_OnSelectedItemChanged" Height="200" x:Name="GridControlAnalyse" dx:DXSerializer.SerializationID="ConsultationAnalysesDemandesDetailsGrid"  MaxHeight="2000" ShowLoadingPanel="{Binding IsLoading}">
+
+                                            <dxg:GridControl.Columns>
+
+                                                <dxg:GridColumn  Width="250" Header="Examen" ReadOnly="True" FieldName="Libelle" />
+                                                <dxg:GridColumn  Width="250" Header="Type" ReadOnly="True" FieldName="TypeExamen" />
+                                                <dxg:GridColumn  Header="Remarques" ReadOnly="True" FieldName="Remarques" />
+                                            </dxg:GridControl.Columns>
+
+                                            <dxg:GridControl.View>
+                                                <dxg:TableView AllowEditing="False"  AllowPerPixelScrolling="True" ShowGroupPanel="False">
+                                                    <dxg:TableView.RowCellMenuCustomizations>
+                                                        <dxb:BarButtonItem Content="Nouveau" Command="{Binding View.DataContext.NewCommand}"  Glyph="{dx:DXImage Image=New_16x16.png}"/>
+                                                        <dxb:BarButtonItem Content="Lodifier" Command="{Binding View.DataContext.EditCommand}" CommandParameter="{Binding Row.Row}" Glyph="{dx:DXImage Image=Edit_16x16.png}"/>
+                                                        <dxb:BarButtonItem Content="Supprimer" Command="{Binding View.DataContext.DeleteCommand}" CommandParameter="{Binding Row.Row}" Glyph="{dx:DXImage Image=Delete_16x16.png}"/>
+                                                        <dxb:BarButtonItem Content="Refresh" Command="{Binding View.DataContext.RefreshCommand}"  Glyph="{dx:DXImage Image=Refresh_16x16.png}"/>
+                                                    </dxg:TableView.RowCellMenuCustomizations>
+                                                </dxg:TableView>
+                                            </dxg:GridControl.View>
+                                        </dxg:GridControl>
+
+                                    </StackPanel>
+
+                                </dxlc:LayoutControl>
+                            </dxlc:LayoutGroup>
+
+
+                            <dxlc:LayoutGroup Header="Traitements" View="GroupBox">
+                                <StackPanel>
+                                    <dxb:ToolBarControl>
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" x:Name="AddGrgBtn" ItemClick="AddGrgBtn_OnItemClick" Content="Nouveau" Command="{Binding NewCommand}"  Glyph="{dx:DXImage Image=New_16x16.png}"/>
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Valider" x:Name="ValideTreatBtn" ItemClick="ValideTreatBtn_OnItemClick" Glyph="{dx:DXImage Image=Apply_16x16.png}"/>
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Supprimer" Name="DeleteTreatCommand" ItemClick="DeleteTreatCommand_OnItemClick" CommandParameter="{Binding SelectedEntity}" Glyph="{dx:DXImage Image=Delete_16x16.png}"/>
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Annuler" Name="CancelTreatCommand" ItemClick="CancelTreatCommand_OnItemClick" CommandParameter="{Binding SelectedEntity}" Glyph="{dx:DXImage Image=Cancel_16x16.png}"/>
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Nouveau Médicament" Name="NewMedicamntBtn" ItemClick="NewMedicamntBtn_OnItemClick" CommandParameter="{Binding SelectedEntity}" Glyph="{dx:DXImage Image=Add_16x16.png}"/>
+                                    </dxb:ToolBarControl>
+                                    <dxlc:LayoutControl>
+                                        <dxlc:LayoutControl x:Name="layoutControl" Orientation="Vertical" Margin="-10" >
+
+                                            <dxlc:LayoutGroup Header="Détail" View="GroupBox" x:Name="TraitemetsGrid">
+                                                <dxlc:LayoutGroup Header="Traitement:" Orientation="Vertical">
+                                                    <dxlc:LayoutItem Label="Médicament" x:Name="layoutItemMedicament">
+                                                        <toolkit:AutoCompleteBox 
+                                                            SelectedItem="{Binding Path=Medicament,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                                            Name="CbMedicament" 
+                                                            ItemTemplate="{ StaticResource AutoCompleteBoxItemTemplate}" 
+                                                            Text="{Binding Medicament.NomCommercial}"
+                                                            ValueMemberPath="NomCommercial"   />
+
+                                                    </dxlc:LayoutItem>
+                                                    <dxlc:DataLayoutItem Label="Qnt">
+                                                        <dxe:TextEdit EditValue="{Binding Path=Qnt, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Mask="n"  Text="1"/>
+                                                    </dxlc:DataLayoutItem>
+                                                    <dxlc:DataLayoutItem Label="N° de jours">
+                                                        <dxe:TextEdit  EditValue="{Binding Path=NbrJours, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Text="1"/>
+                                                    </dxlc:DataLayoutItem>
+                                                    <dxlc:DataLayoutItem Label="Description">
+                                                        <dxe:TextEdit  EditValue="{Binding Path=Description, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Text="1"/>
+                                                    </dxlc:DataLayoutItem>
+                                                </dxlc:LayoutGroup>
+                                            </dxlc:LayoutGroup>
+                                        </dxlc:LayoutControl>
+                                        <StackPanel Margin="0">
+                                            <dxg:GridControl Height="200" MaxHeight="2000" x:Name="GridControlTraitments" dx:DXSerializer.SerializationID="ConsultationTraitementsDetailsGrid" SelectedItemChanged="GridControlTraitments_OnSelectedItemChanged">
+
+                                                <dxg:GridControl.Columns>
+                                                    <dxg:GridColumn Header="Medicament" ReadOnly="True" FieldName="Medicament.NomCommercial" />
+                                                    <dxg:GridColumn Header="Dose" ReadOnly="True" FieldName="Medicament.Dose" />
+                                                    <dxg:GridColumn Header="Qnt" ReadOnly="True" FieldName="Qnt" />
+                                                    <dxg:GridColumn Header="Description" ReadOnly="True" FieldName="Description" />
+                                                </dxg:GridControl.Columns>
+
+
+                                                <dxg:GridControl.View>
+                                                    <dxg:TableView AllowEditing="False" AllowPerPixelScrolling="True" ShowGroupPanel="False">
+                                                        <dxg:TableView.RowCellMenuCustomizations>
+                                                            <dxb:BarButtonItem Content="New" Command="{Binding View.DataContext.NewCommand}"  Glyph="{dx:DXImage Image=New_16x16.png}"/>
+                                                            <dxb:BarButtonItem Content="Edit" Command="{Binding View.DataContext.EditCommand}" CommandParameter="{Binding Row.Row}" Glyph="{dx:DXImage Image=Edit_16x16.png}"/>
+                                                            <dxb:BarButtonItem Content="Delete" Command="{Binding View.DataContext.DeleteCommand}" CommandParameter="{Binding Row.Row}" Glyph="{dx:DXImage Image=Delete_16x16.png}"/>
+                                                            <dxb:BarButtonItem Content="Refresh" Command="{Binding View.DataContext.RefreshCommand}"  Glyph="{dx:DXImage Image=Refresh_16x16.png}"/>
+                                                        </dxg:TableView.RowCellMenuCustomizations>
+                                                    </dxg:TableView>
+                                                </dxg:GridControl.View>
+                                            </dxg:GridControl>
+                                        </StackPanel>
+                                    </dxlc:LayoutControl>
+
+                                </StackPanel>
+                            </dxlc:LayoutGroup>
+                            <dxlc:LayoutGroup Header="Compte rendu" View="GroupBox" >
+                                <StackPanel Margin="0">
+                                    <dxb:ToolBarControl>
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" x:Name="AddCrBtn" ItemClick="AddCrBtn_OnItemClick" Content="Nouveau" Command="{Binding NewCommand}"  Glyph="{dx:DXImage Image=New_16x16.png}"/>
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Valider" x:Name="ValideCrBtn" ItemClick="ValideCrBtn_OnItemClick" Glyph="{dx:DXImage Image=Apply_16x16.png}"/>
+
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Supprimer" Name="DeleteCrCommand" ItemClick="DeleteCrCommand_OnItemClick" CommandParameter="{Binding SelectedEntity}" Glyph="{dx:DXImage Image=Delete_16x16.png}"/>
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Annuler" Name="CancelCrCommand" ItemClick="CancelCrCommand_OnItemClick" CommandParameter="{Binding SelectedEntity}" Glyph="{dx:DXImage Image=Cancel_16x16.png}"/>
+
+                                        <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Impression" x:Name="PrintCrCommand" ItemClick="PrintCrCommand_OnItemClick" Glyph="{dx:DXImage Image=Printer_16x16.png}" />
+                                    </dxb:ToolBarControl>
+                                    <dxlc:LayoutControl Name="ComteRenduGrid">
+
+                                        <dxlc:LayoutGroup Header="Compte rendu" View="GroupBox" Orientation="Vertical">
+                                            <dxlc:LayoutItem Label="Organe">
+                                                <toolkit:AutoCompleteBox Text="{Binding Path=Organe ,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Name="AutoCompleteBoxCompteRendu"/>
+
+
+                                            </dxlc:LayoutItem>
+                                            <dxlc:LayoutItem Label="Etat">
+                                                <dxe:TextEdit  EditValue="{Binding Path=Observation, UpdateSourceTrigger=PropertyChanged , Mode=TwoWay}"/>
+
+                                            </dxlc:LayoutItem>
+                                        </dxlc:LayoutGroup>
+
+                                    </dxlc:LayoutControl>
+
+                                </StackPanel>
+                                <StackPanel Margin="0">
+
+                                    <dxg:GridControl Height="200" MaxHeight="2000" x:Name="GridControlConteRendu" dx:DXSerializer.SerializationID="ConsultationTraitementsDetailsGrid" SelectedItemChanged="GridControlConteRendu_OnSelectedItemChanged">
+
+                                        <dxg:GridControl.Columns>
+                                            <dxg:GridColumn Width="250" Header="Organe" ReadOnly="True" FieldName="Organe" />
+                                            <dxg:GridColumn Width="350" Header="Etat" ReadOnly="True" FieldName="Observation" />
+
+                                        </dxg:GridControl.Columns>
+
+
+                                        <dxg:GridControl.View>
+                                            <dxg:TableView AllowEditing="False" AllowPerPixelScrolling="True" ShowGroupPanel="False">
+                                                <dxg:TableView.RowCellMenuCustomizations>
+                                                    <dxb:BarButtonItem Content="New" Command="{Binding View.DataContext.NewCommand}"  Glyph="{dx:DXImage Image=New_16x16.png}"/>
+                                                    <dxb:BarButtonItem Content="Edit" Command="{Binding View.DataContext.EditCommand}" CommandParameter="{Binding Row.Row}" Glyph="{dx:DXImage Image=Edit_16x16.png}"/>
+                                                    <dxb:BarButtonItem Content="Delete" Command="{Binding View.DataContext.DeleteCommand}" CommandParameter="{Binding Row.Row}" Glyph="{dx:DXImage Image=Delete_16x16.png}"/>
+                                                    <dxb:BarButtonItem Content="Refresh" Command="{Binding View.DataContext.RefreshCommand}"  Glyph="{dx:DXImage Image=Refresh_16x16.png}"/>
+                                                </dxg:TableView.RowCellMenuCustomizations>
+                                            </dxg:TableView>
+                                        </dxg:GridControl.View>
+                                    </dxg:GridControl>
+                                </StackPanel>
+                            </dxlc:LayoutGroup>
+                        </dxlc:LayoutControl>
+
+                    </Grid>
+
+                </TabItem>
+                <TabItem Header="Arrêt de travail">
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="Auto"/>
+
+                        </Grid.RowDefinitions>
+
+                        <StackPanel  Orientation="Horizontal" Margin="5,2,0,0">
+                            <dxb:ToolBarControl Height="35">
+                                <dxb:BarButtonItem  BarItemDisplayMode="ContentAndGlyph" Content="Nouveau" x:Name="AddArretItem"  ItemClick="AddArretItem_OnItemClick" Glyph="{dx:DXImage Image=New_16x16.png}"/>
+                                <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Modifier" x:Name="EditArretCommand" ItemClick="EditArretCommand_OnItemClick" CommandParameter="{Binding SelectedEntity}" Glyph="{dx:DXImage Image=Edit_16x16.png}"/>
+                                <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Supprimer" x:Name="DeleteArretCommand" ItemClick="DeleteArretCommand_OnItemClick" CommandParameter="{Binding SelectedEntity}" Glyph="{dx:DXImage Image=Delete_16x16.png}"/>
+                                <dxb:BarButtonItem ItemClick="PrintArretCommand_OnItemClick" BarItemDisplayMode="ContentAndGlyph" Content="Impression" x:Name="printArretCommand"  Glyph="{dx:DXImage Image=PrinterNetwork_32x32.png}" />
+                            </dxb:ToolBarControl>
+
+
+
+
+                        </StackPanel>
+
+
+                        <Grid Grid.Row="1">
+
+                            <dxg:GridControl 
+								SelectedItemChanged="DataGrid_OnSelectedItemChanged"
+								Grid.Column="0"
+								MaxHeight="500"
+								Height="500"
+				
+								Margin="5" ItemsSource="{Binding ArretTravails, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+								x:Name="DataGridArret">
+                                <dxg:GridControl.View>
+                                    <dxg:TableView  ShowGroupPanel="False"/>
+                                </dxg:GridControl.View>
+                                <dxg:GridControl.Columns>
+                                    <dxg:GridColumn Width="100"  Header="Date" Binding="{Binding Date}"/>
+                                    <dxg:GridColumn Width="180"  Header="Durée" Binding="{Binding Durree}"/>
+                                    <dxg:GridColumn Width="180"  Header="Prolangement de Durée" Binding="{Binding DureeProlangee}"/>
+                                    <dxg:GridColumn Width="120"  Header="Début de travail" Binding="{Binding DubeterTravail}"/>
+
+
+                                </dxg:GridControl.Columns>
+
+
+                            </dxg:GridControl>
+
+                        </Grid>
+
+                    </Grid>
+                </TabItem>
+              
+
+            </TabControl>
+
+        </Grid>
+
+    </ScrollViewer>
+
+
+
+</dxr:DXRibbonWindow>

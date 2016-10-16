@@ -1,0 +1,48 @@
+﻿<dxr:DXRibbonWindow x:Class="GC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+                    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+                    
+          dx:ThemeManager.ThemeName="VS2010"
+                    Loaded="MainWindow_OnLoaded"
+                    FontSize="13"
+                    WindowState="Maximized"
+        Title="Géstion de cabinet médical" Icon="Images/stethoscope-icon.png">
+    <DockPanel>
+      
+        <dxr:RibbonControl DockPanel.Dock="Top" RibbonStyle="Office2010">
+            <dxr:RibbonControl.ToolbarItems>
+                <dxb:BarButtonItemLink BarItemName="newItem"/>
+            </dxr:RibbonControl.ToolbarItems>
+            <dxr:RibbonDefaultPageCategory>
+                <dxr:RibbonPage Caption="Gestion de cabinet">
+                    <dxr:RibbonPageGroup Caption="Patients ">
+                        <dxb:BarButtonItem x:Name="HomeItem" ItemClick="HomeItem_OnItemClick" Content="Home" LargeGlyph="{dx:DXImage Image=PageMargins_32x32.png}" />
+                        <dxb:BarItemSeparator/>
+                        <dxb:BarButtonItem x:Name="CabinetItem" ItemClick="CabinetItem_OnItemClick" Content="Informations Cabinet" LargeGlyph="{dx:DXImage Image=BOPosition2_32x32.png}" Glyph="{dx:DXImage Image=BOPosition2_16x16.png}" />
+                         <dxb:BarItemSeparator/>
+                        <dxb:BarButtonItem ItemClick="PatientsItem_OnItemClick" x:Name="NewpatientsItem" Content="Liste des patients" LargeGlyph="{dx:DXImage Image=BOPerson_32x32.png}"/>
+                        <dxb:BarItemSeparator/>
+                        <dxb:BarButtonItem ItemClick="AddpatientsItem_OnItemClick"  x:Name="AddpatientsItem" Content="Nouveau Patient" LargeGlyph="{dx:DXImage Image=BOContact2_32x32.png}" Glyph="{dx:DXImage Image=AddItem_16x16.png}"/>
+                        <dxb:BarItemSeparator/>
+
+                        <dxb:BarButtonItem ItemClick="ConsultItem_OnItemClick" x:Name="ConsultationItem" Content="Liste des consultation"  LargeGlyph="{dx:DXImage Image=3DClusteredColumn_32x32.png}" Glyph="{dx:DXImage Image=3DClusteredColumn_16x16.png}"  />
+                        <dxb:BarItemSeparator/>
+                        <dxb:BarButtonItem Content="Liste des médicaments" BarItemName="DrugsItem" ItemClick="BarItem_OnItemClick" LargeGlyph="{dx:DXImage Image=Text_32x32.png}" Glyph="{dx:DXImage Image=Text_16x16.png}" />
+                     
+                    </dxr:RibbonPageGroup>
+                 
+                </dxr:RibbonPage>
+            
+                
+            </dxr:RibbonDefaultPageCategory>
+        </dxr:RibbonControl>
+     <Grid Grid.Row="1">
+            <dx:LoadingDecorator Margin="200" Name="LoadingDecorator"/>
+            <ContentControl dx:ScrollBarExtensions.AllowMouseScrolling="True" Name="ContentControl"/>
+        </Grid>
+       
+    </DockPanel>
+</dxr:DXRibbonWindow>

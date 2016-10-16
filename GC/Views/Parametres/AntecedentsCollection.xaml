@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="GC.Views.Parametres.AntecedentsCollection"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+             xmlns:uiControls="clr-namespace:UIControls;assembly=UIControls"
+             xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+             xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+             mc:Ignorable="d" 
+            >
+    <Grid>
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="3">
+                <dxb:ToolBarControl Height="35">
+                    <dxb:BarButtonItem  BarItemDisplayMode="ContentAndGlyph" Content="Nouveau" x:Name="AddItem"  ItemClick="AddItem_OnItemClick" Glyph="{dx:DXImage Image=New_16x16.png}"/>
+                    <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Modifier" x:Name="EditCommand" ItemClick="EditCommand_OnItemClick"  Glyph="{dx:DXImage Image=Edit_16x16.png}"/>
+                    <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Supprimer" x:Name="DeleteCommand" ItemClick="DeleteCommand_OnItemClick"  Glyph="{dx:DXImage Image=Delete_16x16.png}"/>
+                    <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Refresh" Name="RefreshCommand"  Glyph="{dx:DXImage Image=Refresh_16x16.png}"/>
+                </dxb:ToolBarControl>
+                <uiControls:SearchTextBox   CharacterCasing="Upper"  x:Name="TxtSearch"  TextChanged="TxtSearch_OnTextChanged" Margin="3" Width="300" />
+
+            </StackPanel>
+            <dxr:RibbonStatusBarControl DockPanel.Dock="Bottom">
+                <dxr:RibbonStatusBarControl.LeftItems>
+                    <dxb:BarStaticItem Content="{Binding Entities.Count, Converter={dxmvvm:FormatStringConverter FormatString='RECORDS: {0}'}}" />
+                </dxr:RibbonStatusBarControl.LeftItems>
+            </dxr:RibbonStatusBarControl>
+            <Grid>
+
+                <dxg:GridControl Name="gridControl"
+                                
+                                 >
+
+                    <dxg:GridControl.Columns>
+                        <dxg:GridColumn Width="200" FieldName="TypeAntecedent" />
+                        <dxg:GridColumn Width="200" FieldName="Libelle" />
+                    </dxg:GridControl.Columns>
+                    <dxg:GridControl.TotalSummary>
+                        <dxg:GridSummaryItem SummaryType="Count" Alignment="Right"/>
+                    </dxg:GridControl.TotalSummary>
+
+                    <dxg:GridControl.View>
+                        <dxg:TableView Name="tableView" AllowEditing="False" AllowPerPixelScrolling="True" >
+
+                        </dxg:TableView>
+                    </dxg:GridControl.View>
+                </dxg:GridControl>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</UserControl>

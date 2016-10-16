@@ -1,0 +1,163 @@
+﻿<dxr:DXRibbonWindow 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxsch="http://schemas.devexpress.com/winfx/2008/xaml/scheduler"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+    xmlns:dxo="http://schemas.devexpress.com/winfx/2008/xaml/office"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    x:Class="GC.Views.Gestioncabinet.SchedulerView"
+      dx:ThemeManager.ThemeName="Office2010Blue"
+        Title="SchedulerView" WindowState="Maximized">
+    <Window.Resources>
+        <dxsch:SchedulerUICommand x:Key="commands"/>
+        <dxsch:SchedulerControlStringIdConverter x:Key="stringIdConverter"/>
+    </Window.Resources>
+    <Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <dxe:DateNavigator Grid.Column="1" VerticalAlignment="Stretch" Margin="0,139,0,0">
+                <dxe:DateNavigator.StyleSettings>
+                    <dxsch:SchedulerDateNavigatorStyleSettings SchedulerControl="{Binding ElementName=scheduler}"/>
+                </dxe:DateNavigator.StyleSettings>
+            </dxe:DateNavigator>
+            <dxb:BarManager x:Name="barManager1" ToolbarGlyphSize="Small">
+                <dxb:BarManager.Items>
+                    <dxb:BarButtonItem x:Name="biOpenSchedule" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding OpenSchedule, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biSaveSchedule" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding SaveSchedule, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biNewAppointment" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding NewAppointment, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biNewRecurringAppointment" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding NewRecurringAppointment, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biNavigateViewBackward" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding NavigateViewBackward, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biNavigateViewForward" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding NavigateViewForward, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biGotoToday" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding GotoToday, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biViewZoomIn" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding ViewZoomIn, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarButtonItem x:Name="biViewZoomOut" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding ViewZoomOut, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarCheckItem x:Name="biSwitchToDayView" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding SwitchToDayView, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarCheckItem x:Name="biSwitchToWorkWeekView" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding SwitchToWorkWeekView, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarCheckItem x:Name="biSwitchToWeekView" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding SwitchToWeekView, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarCheckItem x:Name="biSwitchToFullWeekView" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding SwitchToFullWeekView, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarCheckItem x:Name="biSwitchToMonthView" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding SwitchToMonthView, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarCheckItem x:Name="biSwitchToTimelineView" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding SwitchToTimelineView, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarCheckItem x:Name="biSwitchToGroupByNone" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding SwitchToGroupByNone, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarCheckItem x:Name="biSwitchToGroupByDate" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding SwitchToGroupByDate, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarCheckItem x:Name="biSwitchToGroupByResource" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding SwitchToGroupByResource, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxsch:TimeScaleBarSubItem x:Name="biSwitchTimeScalesUICommand" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding SwitchTimeScalesUICommand, Mode=OneTime, Source={StaticResource commands}}" SchedulerControl="{Binding ElementName=scheduler}"/>
+                    <dxb:BarEditItem x:Name="biSetTimeIntervalCount" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding SetTimeIntervalCount, Mode=OneTime, Source={StaticResource commands}}" EditWidth="50">
+                        <dxb:BarEditItem.EditSettings>
+                            <dxe:SpinEditSettings MaxValue="15" MinValue="1"/>
+                        </dxb:BarEditItem.EditSettings>
+                    </dxb:BarEditItem>
+                    <dxsch:SwitchTimeScalesCaptionBarSubItem x:Name="biSwitchTimeScalesCaptionUICommand" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding SwitchTimeScalesCaptionUICommand, Mode=OneTime, Source={StaticResource commands}}" SchedulerControl="{Binding ElementName=scheduler}"/>
+                    <dxb:BarCheckItem x:Name="biSwitchCompressWeekend" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding SwitchCompressWeekend, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxb:BarCheckItem x:Name="biSwitchShowWorkTimeOnly" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding SwitchShowWorkTimeOnly, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxsch:SnapToCellsSubItem x:Name="biChangeSnapToCellsUI" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding ChangeSnapToCellsUI, Mode=OneTime, Source={StaticResource commands}}" SchedulerControl="{Binding ElementName=scheduler}"/>
+                    <dxsch:EditAppointmentSeriesBarItem x:Name="biEditAppointmentSeriesGroup" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding EditAppointmentSeriesGroup, Mode=OneTime, Source={StaticResource commands}}" SchedulerControl="{Binding ElementName=scheduler}"/>
+                    <dxb:BarButtonItem x:Name="biEditAppointment" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding EditAppointment, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxsch:DeleteAppointmentSeriesBarItem x:Name="biDeleteAppointmentSeriesGroup" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding DeleteAppointmentSeriesGroup, Mode=OneTime, Source={StaticResource commands}}" SchedulerControl="{Binding ElementName=scheduler}"/>
+                    <dxb:BarButtonItem x:Name="biDeleteAppointment" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding DeleteAppointment, Mode=OneTime, Source={StaticResource commands}}"/>
+                    <dxsch:ChangeStatusBarItem x:Name="biChangeAppointmentStatus" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding ChangeAppointmentStatus, Mode=OneTime, Source={StaticResource commands}}" SchedulerControl="{Binding ElementName=scheduler}"/>
+                    <dxsch:ChangeLabelBarItem x:Name="biChangeAppointmentLabel" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding ChangeAppointmentLabel, Mode=OneTime, Source={StaticResource commands}}" SchedulerControl="{Binding ElementName=scheduler}"/>
+                    <dxb:BarCheckItem x:Name="biToggleRecurrence" CommandParameter="{Binding ElementName=scheduler}" Command="{Binding ToggleRecurrence, Mode=OneTime, Source={StaticResource commands}}"/>
+                </dxb:BarManager.Items>
+                <DockPanel>
+                    <dxr:RibbonControl x:Name="ribbonControl1" DockPanel.Dock="Top">
+                        <dxr:RibbonDefaultPageCategory>
+                             <dxr:RibbonPage x:Name="pagePageView" Caption="{Binding ConverterParameter=Caption_PageView, Converter={StaticResource stringIdConverter}, Mode=OneTime, Source={StaticResource stringIdConverter}}">
+                                <dxr:RibbonPageGroup x:Name="grpPageViewViewSelector" Caption="{Binding ConverterParameter=Caption_GroupViewSelector, Converter={StaticResource stringIdConverter}, Mode=OneTime, Source={StaticResource stringIdConverter}}" ShowCaptionButton="False">
+                                    <dxr:RibbonPageGroup.ItemLinks>
+                                        <dxb:BarCheckItemLink BarItemName="biSwitchToDayView"/>
+                                        <dxb:BarCheckItemLink BarItemName="biSwitchToWorkWeekView"/>
+                                        <dxb:BarCheckItemLink BarItemName="biSwitchToWeekView"/>
+                                        <dxb:BarCheckItemLink BarItemName="biSwitchToFullWeekView"/>
+                                        <dxb:BarCheckItemLink BarItemName="biSwitchToMonthView"/>
+                                        <dxb:BarCheckItemLink BarItemName="biSwitchToTimelineView"/>
+                                    </dxr:RibbonPageGroup.ItemLinks>
+                                </dxr:RibbonPageGroup>
+                                <dxr:RibbonPageGroup x:Name="grpPageViewTimeScale" Caption="{Binding ConverterParameter=Caption_GroupTimeScale, Converter={StaticResource stringIdConverter}, Mode=OneTime, Source={StaticResource stringIdConverter}}" ShowCaptionButton="False">
+                                    <dxr:RibbonPageGroup.ItemLinks>
+                                        <dxb:BarSubItemLink BarItemName="biSwitchTimeScalesUICommand"/>
+                                        <dxb:BarEditItemLink BarItemName="biSetTimeIntervalCount"/>
+                                        <dxb:BarSubItemLink BarItemName="biSwitchTimeScalesCaptionUICommand"/>
+                                    </dxr:RibbonPageGroup.ItemLinks>
+                                </dxr:RibbonPageGroup>
+                                <dxr:RibbonPageGroup x:Name="grpPageViewLayout" Caption="{Binding ConverterParameter=Caption_GroupLayout, Converter={StaticResource stringIdConverter}, Mode=OneTime, Source={StaticResource stringIdConverter}}" ShowCaptionButton="False">
+                                    <dxr:RibbonPageGroup.ItemLinks>
+                                        <dxb:BarCheckItemLink BarItemName="biSwitchCompressWeekend"/>
+                                        <dxb:BarCheckItemLink BarItemName="biSwitchShowWorkTimeOnly"/>
+                                        <dxb:BarSubItemLink BarItemName="biChangeSnapToCellsUI"/>
+                                    </dxr:RibbonPageGroup.ItemLinks>
+                                </dxr:RibbonPageGroup>
+                            </dxr:RibbonPage>
+                        </dxr:RibbonDefaultPageCategory>
+                        <dxr:RibbonPageCategory x:Name="catAppointmentTools" Caption="{Binding ConverterParameter=Caption_PageCategoryAppointmentTools, Converter={StaticResource stringIdConverter}, Mode=OneTime, Source={StaticResource stringIdConverter}}" dxo:AttachedCommand.Command="{Binding ToolsAppointmentCommandGroup, Mode=OneTime, Source={StaticResource commands}}">
+                            <dxr:RibbonPage x:Name="pageAppointmentToolsAppointment" Caption="{Binding ConverterParameter=Caption_PageAppointment, Converter={StaticResource stringIdConverter}, Mode=OneTime, Source={StaticResource stringIdConverter}}">
+                                <dxr:RibbonPageGroup x:Name="grpAppointmentToolsAppointmentActions" Caption="{Binding ConverterParameter=Caption_GroupAppointmentActions, Converter={StaticResource stringIdConverter}, Mode=OneTime, Source={StaticResource stringIdConverter}}" ShowCaptionButton="False">
+                                    <dxr:RibbonPageGroup.ItemLinks>
+                                        <dxb:BarSubItemLink BarItemName="biEditAppointmentSeriesGroup"/>
+                                        <dxb:BarButtonItemLink BarItemName="biEditAppointment"/>
+                                        <dxb:BarSubItemLink BarItemName="biDeleteAppointmentSeriesGroup"/>
+                                        <dxb:BarButtonItemLink BarItemName="biDeleteAppointment"/>
+                                    </dxr:RibbonPageGroup.ItemLinks>
+                                </dxr:RibbonPageGroup>
+                                <dxr:RibbonPageGroup x:Name="grpAppointmentToolsAppointmentOptions" Caption="{Binding ConverterParameter=Caption_GroupAppointmentOptions, Converter={StaticResource stringIdConverter}, Mode=OneTime, Source={StaticResource stringIdConverter}}" ShowCaptionButton="False">
+                                    <dxr:RibbonPageGroup.ItemLinks>
+                                        <dxsch:ColorablePopupMenuBasedBarItemLink BarItemName="biChangeAppointmentStatus"/>
+                                        <dxsch:ColorablePopupMenuBasedBarItemLink BarItemName="biChangeAppointmentLabel"/>
+                                        <dxb:BarCheckItemLink BarItemName="biToggleRecurrence"/>
+                                    </dxr:RibbonPageGroup.ItemLinks>
+                                </dxr:RibbonPageGroup>
+                            </dxr:RibbonPage>
+                        </dxr:RibbonPageCategory>
+                    </dxr:RibbonControl>
+                    <dxsch:SchedulerControl x:Name="scheduler" GroupType="None" VerticalAlignment="Stretch" BarManager="{Binding ElementName=barManager1, Mode=OneTime}" Ribbon="{Binding ElementName=ribbonControl1, Mode=OneTime}">
+                        <dxsch:SchedulerControl.FullWeekView>
+                            <dxsch:FullWeekView Enabled="True"/>
+                        </dxsch:SchedulerControl.FullWeekView>
+                        <dxsch:SchedulerControl.WeekView>
+                            <dxsch:WeekView Enabled="False"/>
+                        </dxsch:SchedulerControl.WeekView>
+                        <dxsch:SchedulerControl.Storage>
+                            <dxsch:SchedulerStorage>
+                                <dxsch:SchedulerStorage.AppointmentStorage>
+
+                                    <dxsch:AppointmentStorage DataSource="{Binding}">
+                                        <dxsch:AppointmentStorage.Mappings>
+                                            <dxsch:AppointmentMapping Start="StartTime"
+                                        End="EndTime"
+                                        Subject="Subject"
+                                        AllDay="AllDay"
+                                        Description="Description"
+                                        Label="Label"
+                                        Location="Location"
+                                        RecurrenceInfo="RecurrenceInfo"
+                                        ReminderInfo="ReminderInfo"
+                                        ResourceId="OwnerId"
+                                        Status="Status"
+                                        Type="EventType"
+                                    />
+                                        </dxsch:AppointmentStorage.Mappings>
+                                    </dxsch:AppointmentStorage>
+                                </dxsch:SchedulerStorage.AppointmentStorage>
+                                <dxsch:SchedulerStorage.ResourceStorage>
+                                    <dxsch:ResourceStorage DataContext="{Binding}">
+                                        <dxsch:ResourceStorage.Mappings>
+                                            <dxsch:ResourceMapping Id="Id"
+									Caption="Name"
+                                    />
+                                        </dxsch:ResourceStorage.Mappings>
+                                    </dxsch:ResourceStorage>
+                                </dxsch:SchedulerStorage.ResourceStorage>
+                            </dxsch:SchedulerStorage>
+                        </dxsch:SchedulerControl.Storage>
+                    </dxsch:SchedulerControl>
+                </DockPanel>
+            </dxb:BarManager>
+        </Grid>
+
+    </Grid>
+</dxr:DXRibbonWindow>

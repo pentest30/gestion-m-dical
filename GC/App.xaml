@@ -1,0 +1,43 @@
+<Application x:Class="GC.App" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml" Startup="OnAppStartup_UpdateThemeName" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" d1p1:Ignorable="d" xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006">
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Resources/Errortamplate.xaml">
+          
+        </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <DataTemplate x:Key="AutoCompleteBoxItemTemplate">
+                <StackPanel Orientation="Horizontal">
+                    <Label
+            Content="{Binding NomCommercial}"
+            Width="200" />
+                    <Label
+            Content="{Binding Dose}"
+            FontStyle="Italic"
+                        Width="120"
+             />
+                    <Label
+            Content="{Binding Forme}"
+            FontStyle="Italic"
+                        Width="180"
+             />
+                </StackPanel>
+            </DataTemplate>
+            <DataTemplate x:Key="AutoCompleteDciItemTemplate">
+                <StackPanel Orientation="Horizontal">
+                    <Label
+            Content="{Binding Nom}"
+            Width="200" />
+                  
+                 
+                </StackPanel>
+            </DataTemplate>
+
+        </ResourceDictionary>
+       
+    </Application.Resources>
+   
+</Application>
