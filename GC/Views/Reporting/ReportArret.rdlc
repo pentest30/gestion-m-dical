@@ -4,268 +4,6 @@
     <ReportItems>
       <Rectangle Name="Rectangle2">
         <ReportItems>
-          <Textbox Name="Textbox2">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value />
-                    <Style>
-                      <FontFamily />
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value xml:space="preserve">    </Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Cambria</FontFamily>
-                      <FontSize>14pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value xml:space="preserve">  </Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>14pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value xml:space="preserve"> </Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Cambria</FontFamily>
-                      <FontSize>14pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value>  Dr AYOUCHE M.A    </Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Cambria</FontFamily>
-                      <FontSize>14pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#0070c0</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <LeftIndent>0cm</LeftIndent>
-                <RightIndent>0cm</RightIndent>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                  <LineHeight>13pt</LineHeight>
-                </Style>
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>الدكتور عـيـوش  م.أ</Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>14pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#0070c0</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <LeftIndent>0.10054cm</LeftIndent>
-                <RightIndent>0cm</RightIndent>
-                <ListLevel>1</ListLevel>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                  <LineHeight>13pt</LineHeight>
-                </Style>
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value />
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>14pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#0070c0</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <LeftIndent>0.10054cm</LeftIndent>
-                <RightIndent>0cm</RightIndent>
-                <ListLevel>1</ListLevel>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                  <LineHeight>13pt</LineHeight>
-                </Style>
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value xml:space="preserve">    </Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Cambria</FontFamily>
-                      <FontSize>12pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#0070c0</Color>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value>O.R.L et Chirurgie cervico-faciale</Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Cambria</FontFamily>
-                      <FontSize>12pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>Underline</TextDecoration>
-                      <Color>#0070c0</Color>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value xml:space="preserve">  </Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Cambria</FontFamily>
-                      <FontSize>12pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#0070c0</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <LeftIndent>0cm</LeftIndent>
-                <RightIndent>0cm</RightIndent>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                  <LineHeight>13pt</LineHeight>
-                </Style>
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>أمراض و جراحة الأذن,الأنف,الحنجرة و الحساسية</Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Times New Roman</FontFamily>
-                      <FontSize>12pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#0070c0</Color>
-                    </Style>
-                  </TextRun>
-                  <TextRun>
-                    <Value xml:space="preserve">  </Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Cambria</FontFamily>
-                      <FontSize>12pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#0070c0</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <LeftIndent>0.10054cm</LeftIndent>
-                <RightIndent>0cm</RightIndent>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                  <LineHeight>13pt</LineHeight>
-                </Style>
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Audiométrie    ,     Impédencemétrie,</Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Cambria</FontFamily>
-                      <FontSize>12pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#0070c0</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <LeftIndent>0cm</LeftIndent>
-                <RightIndent>0cm</RightIndent>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                  <LineHeight>13pt</LineHeight>
-                </Style>
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Fibroscopie     ,      Allergologie  ORL</Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Cambria</FontFamily>
-                      <FontSize>12pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#0070c0</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <LeftIndent>0cm</LeftIndent>
-                <RightIndent>0cm</RightIndent>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                  <LineHeight>13pt</LineHeight>
-                </Style>
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value />
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Cambria</FontFamily>
-                      <FontSize>12pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#0070c0</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <LeftIndent>0cm</LeftIndent>
-                <RightIndent>0cm</RightIndent>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                  <LineHeight>13pt</LineHeight>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Height>4.34799cm</Height>
-            <Width>8.2991cm</Width>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="Textbox4">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -288,11 +26,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox4</rd:DefaultName>
-            <Top>5.95313cm</Top>
+            <Top>5.08001cm</Top>
             <Left>3.62479cm</Left>
             <Height>1.02333cm</Height>
             <Width>7.58836cm</Width>
-            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -327,7 +64,7 @@
             <Left>8.62542cm</Left>
             <Height>0.69701cm</Height>
             <Width>1.04479cm</Width>
-            <ZIndex>2</ZIndex>
+            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -345,7 +82,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!DatePrint.Value</Value>
+                    <Value>=First(Fields!DatePrint.Value, "DataSet1")</Value>
                     <Style>
                       <FontFamily>Cambria</FontFamily>
                       <FontSize>11pt</FontSize>
@@ -363,7 +100,7 @@
             <Left>9.70549cm</Left>
             <Height>0.6cm</Height>
             <Width>4.06257cm</Width>
-            <ZIndex>3</ZIndex>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -375,11 +112,11 @@
             </Style>
           </Textbox>
           <Line Name="Line1">
-            <Top>4.45382cm</Top>
-            <Left>0.37134cm</Left>
+            <Top>3.24556cm</Top>
+            <Left>0.54222cm</Left>
             <Height>0cm</Height>
             <Width>5.56917cm</Width>
-            <ZIndex>4</ZIndex>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Color>#0070c0</Color>
@@ -394,7 +131,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Cité el houria ,bt A5 ,khemis Miliana</Value>
+                    <Value>=Fields!Addresse.Value</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Cambria</FontFamily>
@@ -411,7 +148,17 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value> Tél : 027 56 04 80</Value>
+                    <Value> Tél : </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#0070c0</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Fields!Tel.Value</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Cambria</FontFamily>
@@ -427,10 +174,284 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Top>4.63021cm</Top>
+            <Top>3.38668cm</Top>
             <Left>0.05384cm</Left>
-            <Height>1.05269cm</Height>
+            <Height>1.02623cm</Height>
             <Width>6.81271cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox2">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value xml:space="preserve">    </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve">  </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#0070c0</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> Dr.    </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#0070c0</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=First(Fields!NomMedecin.Value, "DataSet1")</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#0070c0</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#0070c0</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=First(Fields!PrenomMedecin.Value, "DataSet1")</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#0070c0</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>الدكتور: </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#0070c0</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=First(Fields!NomAr.Value, "DataSet1")</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#0070c0</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#0070c0</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=First(Fields!PrenomAr.Value, "DataSet1")</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#0070c0</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <LeftIndent>0.10054cm</LeftIndent>
+                <RightIndent>0cm</RightIndent>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                  <LineHeight>13pt</LineHeight>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#0070c0</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <LeftIndent>0.10054cm</LeftIndent>
+                <RightIndent>0cm</RightIndent>
+                <ListLevel>1</ListLevel>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                  <LineHeight>13pt</LineHeight>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value xml:space="preserve">    </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#0070c0</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#0070c0</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=First(Fields!Specialite.Value, "DataSet1")</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#0070c0</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <LeftIndent>0cm</LeftIndent>
+                <RightIndent>0cm</RightIndent>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                  <LineHeight>13pt</LineHeight>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#0070c0</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#0070c0</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=First(Fields!SpecialiteAr.Value, "DataSet1")</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>simplified Arabic</FontFamily>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#0070c0</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <LeftIndent>0.10054cm</LeftIndent>
+                <RightIndent>0cm</RightIndent>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                  <LineHeight>13pt</LineHeight>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>0.10583cm</Top>
+            <Left>0.05384cm</Left>
+            <Height>2.96334cm</Height>
+            <Width>6.71901cm</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -445,7 +466,7 @@
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Left>0.36648cm</Left>
-        <Height>7.20231cm</Height>
+        <Height>6.51439cm</Height>
         <Width>14.03112cm</Width>
         <Style>
           <Border>
@@ -460,7 +481,34 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>     Je soussigne Docteur AYOYUCHE .M.A</Value>
+                <Value>     Je soussigne Docteur </Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontFamily>cambria</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#0070c0</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Fields!NomMedecin.Value</Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontFamily>cambria</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#0070c0</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">  </Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontFamily>cambria</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <Color>#0070c0</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Fields!PrenomMedecin.Value</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>cambria</FontFamily>
@@ -473,10 +521,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox12</rd:DefaultName>
-        <Top>7.34342cm</Top>
+        <Top>6.70842cm</Top>
         <Left>1.27912cm</Left>
         <Height>0.65292cm</Height>
-        <Width>9.74958cm</Width>
+        <Width>12.58915cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -508,7 +556,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>8.0669cm</Top>
+        <Top>7.4319cm</Top>
         <Left>1.23944cm</Left>
         <Height>0.60882cm</Height>
         <Width>4.48438cm</Width>
@@ -530,7 +578,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!Nom.Value</Value>
+                <Value>=First(Fields!Nom.Value, "DataSet1")</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>cambria</FontFamily>
@@ -546,7 +594,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>=Fields!Prenom.Value</Value>
+                <Value>=First(Fields!Prenom.Value, "DataSet1")</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>cambria</FontFamily>
@@ -560,7 +608,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>8.0669cm</Top>
+        <Top>7.4319cm</Top>
         <Left>5.7591cm</Left>
         <Height>0.60882cm</Height>
         <Width>8.10917cm</Width>
@@ -595,10 +643,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>8.78155cm</Top>
+        <Top>8.14655cm</Top>
         <Left>1.25031cm</Left>
         <Height>0.61853cm</Height>
-        <Width>1.49459cm</Width>
+        <Width>1.42403cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -617,7 +665,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!Age.Value</Value>
+                <Value>=First(Fields!Age.Value, "DataSet1")</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>cambria</FontFamily>
@@ -631,8 +679,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>8.78155cm</Top>
-        <Left>2.85073cm</Left>
+        <Top>8.15626cm</Top>
+        <Left>2.70962cm</Left>
         <Height>0.6441cm</Height>
         <Width>4.55494cm</Width>
         <ZIndex>5</ZIndex>
@@ -675,7 +723,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>9.50592cm</Top>
+        <Top>8.87092cm</Top>
         <Left>1.25031cm</Left>
         <Height>0.635cm</Height>
         <Width>4.48438cm</Width>
@@ -697,7 +745,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>1- Un arrêt de travail de :</Value>
+                <Value>1- Un arrêt de travail de:</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>cambria</FontFamily>
@@ -710,10 +758,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>10.25557cm</Top>
+        <Top>9.62057cm</Top>
         <Left>1.25031cm</Left>
         <Height>0.70556cm</Height>
-        <Width>4.84598cm</Width>
+        <Width>4.63431cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -740,7 +788,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>=Fields!Duree.Value</Value>
+                <Value>=iif(string.IsNullOrWhiteSpace(First(Fields!Duree.Value, "DataSet1")),"........",First(Fields!Duree.Value, "DataSet1"))</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>cambria</FontFamily>
@@ -762,8 +810,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>10.25557cm</Top>
-        <Left>6.20212cm</Left>
+        <Top>9.62057cm</Top>
+        <Left>5.88462cm</Left>
         <Height>0.70556cm</Height>
         <Width>2.41888cm</Width>
         <ZIndex>8</ZIndex>
@@ -805,7 +853,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>11.0314cm</Top>
+        <Top>10.3964cm</Top>
         <Left>1.25031cm</Left>
         <Height>0.6441cm</Height>
         <Width>2.57938cm</Width>
@@ -827,7 +875,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!Date.Value</Value>
+                <Value>=iif(string.IsNullOrWhiteSpace(First(Fields!Date.Value, "DataSet1")),"........",First(Fields!Date.Value, "DataSet1"))</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>cambria</FontFamily>
@@ -859,8 +907,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>11.0314cm</Top>
-        <Left>3.9708cm</Left>
+        <Top>10.3964cm</Top>
+        <Left>3.86497cm</Left>
         <Height>0.6441cm</Height>
         <Width>9.58437cm</Width>
         <ZIndex>10</ZIndex>
@@ -881,7 +929,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>2- Une prolangation de travail de :</Value>
+                <Value>2- Une prolangation d'arrêt   de travail de:</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>cambria</FontFamily>
@@ -894,10 +942,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>11.85189cm</Top>
+        <Top>11.21689cm</Top>
         <Left>1.27912cm</Left>
         <Height>0.76716cm</Height>
-        <Width>6.50404cm</Width>
+        <Width>7.67876cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -916,7 +964,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!DureeProlange.Value</Value>
+                <Value>=iif(string.IsNullOrWhiteSpace(First(Fields!DureeProlange.Value, "DataSet1")),".......",First(Fields!DureeProlange.Value, "DataSet1"))</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>cambria</FontFamily>
@@ -930,10 +978,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>11.85189cm</Top>
-        <Left>7.889cm</Left>
+        <Top>11.21689cm</Top>
+        <Left>9.02843cm</Left>
         <Height>0.76716cm</Height>
-        <Width>4.48438cm</Width>
+        <Width>4.54438cm</Width>
         <ZIndex>12</ZIndex>
         <Style>
           <Border>
@@ -965,10 +1013,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>12.62772cm</Top>
+        <Top>11.99272cm</Top>
         <Left>1.27912cm</Left>
         <Height>0.7057cm</Height>
-        <Width>2.57938cm</Width>
+        <Width>2.47356cm</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>
@@ -987,7 +1035,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!DateProlangation.Value, "DataSet1")</Value>
+                <Value>=iif(string.IsNullOrWhiteSpace(First(Fields!DateProlangation.Value, "DataSet1")) ,".........",First(Fields!DateProlangation.Value, "DataSet1"))</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>cambria</FontFamily>
@@ -1036,8 +1084,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>12.62772cm</Top>
-        <Left>3.92907cm</Left>
+        <Top>12.01933cm</Top>
+        <Left>3.78796cm</Left>
         <Height>0.7057cm</Height>
         <Width>9.6261cm</Width>
         <ZIndex>14</ZIndex>
@@ -1071,10 +1119,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>13.47452cm</Top>
+        <Top>12.83952cm</Top>
         <Left>1.27912cm</Left>
         <Height>0.67021cm</Height>
-        <Width>6.66278cm</Width>
+        <Width>6.50405cm</Width>
         <ZIndex>15</ZIndex>
         <Style>
           <Border>
@@ -1093,7 +1141,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!DubetTravail.Value</Value>
+                <Value>=First(Fields!DubetTravail.Value, "DataSet1")</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>cambria</FontFamily>
@@ -1108,8 +1156,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>13.47452cm</Top>
-        <Left>7.889cm</Left>
+        <Top>12.83952cm</Top>
+        <Left>7.81844cm</Left>
         <Height>0.67021cm</Height>
         <Width>4.64313cm</Width>
         <ZIndex>16</ZIndex>
@@ -1168,16 +1216,12 @@
       <Border>
         <Style>None</Style>
       </Border>
-      <BackgroundImage>
-        <Source>Embedded</Source>
-        <Value>orl</Value>
-      </BackgroundImage>
     </Style>
   </Body>
   <Width>5.68391in</Width>
   <Page>
     <PageHeader>
-      <Height>1.56545cm</Height>
+      <Height>1.80358cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1188,7 +1232,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>CABINET MEDICAL SPECIALISE EN O-R-L</Value>
+                  <Value>=Fields!NomCabinet.Value</Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
                     <FontFamily>Cambria</FontFamily>
@@ -1205,9 +1249,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>0.68351cm</Top>
+          <Top>0.78052cm</Top>
           <Left>1.71538cm</Left>
-          <Height>0.74083cm</Height>
+          <Height>0.84666cm</Height>
           <Width>11.20479cm</Width>
           <Style>
             <Border>
@@ -1294,6 +1338,42 @@
           <DataField>DateProlangation</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="NomMedecin">
+          <DataField>NomMedecin</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PrenomMedecin">
+          <DataField>PrenomMedecin</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NomAr">
+          <DataField>NomAr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PrenomAr">
+          <DataField>PrenomAr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tel">
+          <DataField>Tel</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Addresse">
+          <DataField>Addresse</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NomCabinet">
+          <DataField>NomCabinet</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Specialite">
+          <DataField>Specialite</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SpecialiteAr">
+          <DataField>SpecialiteAr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="DatePrint">
           <DataField>DatePrint</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -1301,7 +1381,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>E:\gestion cabinet\GC\GC\Views\Reporting\DataSet1.xsd</rd:SchemaPath>
+        <rd:SchemaPath>E:\Gestion cabinet general\GC\GC\Views\Reporting\DataSet1.xsd</rd:SchemaPath>
         <rd:TableName>Arret</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

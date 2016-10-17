@@ -26,8 +26,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox4</rd:DefaultName>
-            <Top>4.68313cm</Top>
-            <Left>4.89479cm</Left>
+            <Top>4.54202cm</Top>
+            <Left>5.29166cm</Left>
             <Height>1.02333cm</Height>
             <Width>4.54565cm</Width>
             <Style>
@@ -60,8 +60,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Top>0.48507cm</Top>
-            <Left>8.30792cm</Left>
+            <Top>0.66146cm</Top>
+            <Left>8.70479cm</Left>
             <Height>0.69701cm</Height>
             <Width>1.04479cm</Width>
             <ZIndex>1</ZIndex>
@@ -104,8 +104,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Top>1.28791cm</Top>
-            <Left>8.30792cm</Left>
+            <Top>1.4643cm</Top>
+            <Left>8.70479cm</Left>
             <Height>0.66119cm</Height>
             <Width>1.60042cm</Width>
             <ZIndex>2</ZIndex>
@@ -148,8 +148,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Top>1.96674cm</Top>
-            <Left>8.33438cm</Left>
+            <Top>2.14313cm</Top>
+            <Left>8.73125cm</Left>
             <Height>0.63527cm</Height>
             <Width>1.88659cm</Width>
             <ZIndex>3</ZIndex>
@@ -183,8 +183,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Top>2.70784cm</Top>
-            <Left>8.33438cm</Left>
+            <Top>2.88423cm</Top>
+            <Left>8.73125cm</Left>
             <Height>0.69646cm</Height>
             <Width>1.13252cm</Width>
             <ZIndex>4</ZIndex>
@@ -219,8 +219,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox31</rd:DefaultName>
-            <Top>0.51152cm</Top>
-            <Left>9.38799cm</Left>
+            <Top>0.68791cm</Top>
+            <Left>9.78487cm</Left>
             <Height>0.6cm</Height>
             <Width>4.27424cm</Width>
             <ZIndex>5</ZIndex>
@@ -254,8 +254,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox32</rd:DefaultName>
-            <Top>1.28791cm</Top>
-            <Left>9.94362cm</Left>
+            <Top>1.4643cm</Top>
+            <Left>10.34049cm</Left>
             <Height>0.60827cm</Height>
             <Width>4.0875cm</Width>
             <ZIndex>6</ZIndex>
@@ -289,8 +289,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Prenom</rd:DefaultName>
-            <Top>2.00202cm</Top>
-            <Left>10.22097cm</Left>
+            <Top>2.17841cm</Top>
+            <Left>10.61784cm</Left>
             <Height>0.6cm</Height>
             <Width>3.81015cm</Width>
             <ZIndex>7</ZIndex>
@@ -324,8 +324,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Age</rd:DefaultName>
-            <Top>2.7784cm</Top>
-            <Left>9.53746cm</Left>
+            <Top>2.95479cm</Top>
+            <Left>9.93433cm</Left>
             <Height>0.6cm</Height>
             <Width>3.68652cm</Width>
             <ZIndex>8</ZIndex>
@@ -615,28 +615,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Audiométrie    ,     Impédencemétrie,</Value>
-                    <Style>
-                      <FontStyle>Normal</FontStyle>
-                      <FontFamily>Cambria</FontFamily>
-                      <FontSize>12pt</FontSize>
-                      <FontWeight>Normal</FontWeight>
-                      <TextDecoration>None</TextDecoration>
-                      <Color>#0070c0</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <LeftIndent>0cm</LeftIndent>
-                <RightIndent>0cm</RightIndent>
-                <Style>
-                  <TextAlign>Center</TextAlign>
-                  <LineHeight>13pt</LineHeight>
-                </Style>
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Fibroscopie     ,      Allergologie  ORL</Value>
+                    <Value />
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Cambria</FontFamily>
@@ -677,9 +656,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.02487cm</Top>
-            <Height>4.50674cm</Height>
-            <Width>7.92868cm</Width>
+            <Height>3.64401cm</Height>
+            <Width>7.3466cm</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
@@ -693,10 +671,10 @@
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>0.3175cm</Top>
-        <Left>0.65375cm</Left>
-        <Height>5.82648cm</Height>
-        <Width>14.03112cm</Width>
+        <Top>0.14111cm</Top>
+        <Left>0.25688cm</Left>
+        <Height>6.00287cm</Height>
+        <Width>14.428cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -800,10 +778,6 @@
       <Border>
         <Style>None</Style>
       </Border>
-      <BackgroundImage>
-        <Source>Embedded</Source>
-        <Value>orl</Value>
-      </BackgroundImage>
     </Style>
   </Body>
   <Width>5.78144in</Width>
@@ -895,7 +869,37 @@
                   </Style>
                 </TextRun>
                 <TextRun>
-                  <Value>Adresse :Cité el houria ,bt A5 ,khemis Miliana Tél : 027 56 04 80</Value>
+                  <Value>Adresse :</Value>
+                  <Style>
+                    <FontStyle>Normal</FontStyle>
+                    <FontFamily>Cambria</FontFamily>
+                    <FontWeight>Normal</FontWeight>
+                    <TextDecoration>None</TextDecoration>
+                    <Color>#0070c0</Color>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=Fields!Addresse.Value</Value>
+                  <Style>
+                    <FontStyle>Normal</FontStyle>
+                    <FontFamily>Cambria</FontFamily>
+                    <FontWeight>Normal</FontWeight>
+                    <TextDecoration>None</TextDecoration>
+                    <Color>#0070c0</Color>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value> Tél : </Value>
+                  <Style>
+                    <FontStyle>Normal</FontStyle>
+                    <FontFamily>Cambria</FontFamily>
+                    <FontWeight>Normal</FontWeight>
+                    <TextDecoration>None</TextDecoration>
+                    <Color>#0070c0</Color>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=Fields!Tel.Value</Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
                     <FontFamily>Cambria</FontFamily>
@@ -905,12 +909,13 @@
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
           <Top>0.23748cm</Top>
-          <Left>1.33848cm</Left>
           <Height>0.6cm</Height>
           <Width>13.295cm</Width>
           <ZIndex>1</ZIndex>
@@ -1016,7 +1021,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>E:\gestion cabinet\GC\GC\Views\Reporting\DataSet1.xsd</rd:SchemaPath>
+        <rd:SchemaPath>E:\Gestion cabinet general\GC\GC\Views\Reporting\DataSet1.xsd</rd:SchemaPath>
         <rd:TableName>Bilan</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

@@ -25,10 +25,8 @@
                          <dxb:BarItemSeparator/>
                         <dxb:BarButtonItem ItemClick="PatientsItem_OnItemClick" x:Name="NewpatientsItem" Content="Liste des patients" LargeGlyph="{dx:DXImage Image=BOPerson_32x32.png}"/>
                         <dxb:BarItemSeparator/>
-                        <dxb:BarButtonItem ItemClick="AddpatientsItem_OnItemClick"  x:Name="AddpatientsItem" Content="Nouveau Patient" LargeGlyph="{dx:DXImage Image=BOContact2_32x32.png}" Glyph="{dx:DXImage Image=AddItem_16x16.png}"/>
-                        <dxb:BarItemSeparator/>
-
-                        <dxb:BarButtonItem ItemClick="ConsultItem_OnItemClick" x:Name="ConsultationItem" Content="Liste des consultation"  LargeGlyph="{dx:DXImage Image=3DClusteredColumn_32x32.png}" Glyph="{dx:DXImage Image=3DClusteredColumn_16x16.png}"  />
+              
+                        <dxb:BarButtonItem ItemClick="ConsultItem_OnItemClick" x:Name="ConsultationItem" Content="Liste des consultations"  LargeGlyph="{dx:DXImage Image=3DClusteredColumn_32x32.png}" Glyph="{dx:DXImage Image=3DClusteredColumn_16x16.png}"  />
                         <dxb:BarItemSeparator/>
                         <dxb:BarButtonItem Content="Liste des médicaments" BarItemName="DrugsItem" ItemClick="BarItem_OnItemClick" LargeGlyph="{dx:DXImage Image=Text_32x32.png}" Glyph="{dx:DXImage Image=Text_16x16.png}" />
                      

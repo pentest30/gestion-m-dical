@@ -2105,6 +2105,24 @@ namespace GC.Views.Reporting {
             
             private global::System.Data.DataColumn columnDateProlangation;
             
+            private global::System.Data.DataColumn columnNomMedecin;
+            
+            private global::System.Data.DataColumn columnPrenomMedecin;
+            
+            private global::System.Data.DataColumn columnNomAr;
+            
+            private global::System.Data.DataColumn columnPrenomAr;
+            
+            private global::System.Data.DataColumn columnTel;
+            
+            private global::System.Data.DataColumn columnAddresse;
+            
+            private global::System.Data.DataColumn columnNomCabinet;
+            
+            private global::System.Data.DataColumn columnSpecialite;
+            
+            private global::System.Data.DataColumn columnSpecialiteAr;
+            
             private global::System.Data.DataColumn columnDatePrint;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2222,6 +2240,78 @@ namespace GC.Views.Reporting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NomMedecinColumn {
+                get {
+                    return this.columnNomMedecin;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PrenomMedecinColumn {
+                get {
+                    return this.columnPrenomMedecin;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NomArColumn {
+                get {
+                    return this.columnNomAr;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PrenomArColumn {
+                get {
+                    return this.columnPrenomAr;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TelColumn {
+                get {
+                    return this.columnTel;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AddresseColumn {
+                get {
+                    return this.columnAddresse;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NomCabinetColumn {
+                get {
+                    return this.columnNomCabinet;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SpecialiteColumn {
+                get {
+                    return this.columnSpecialite;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SpecialiteArColumn {
+                get {
+                    return this.columnSpecialiteAr;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn DatePrintColumn {
                 get {
                     return this.columnDatePrint;
@@ -2265,7 +2355,27 @@ namespace GC.Views.Reporting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ArretRow AddArretRow(string Nom, string Prenom, string Age, string DateDarret, string Date, string Duree, string DureeProlange, string DubetTravail, string FullName, string DateProlangation, string DatePrint) {
+            public ArretRow AddArretRow(
+                        string Nom, 
+                        string Prenom, 
+                        string Age, 
+                        string DateDarret, 
+                        string Date, 
+                        string Duree, 
+                        string DureeProlange, 
+                        string DubetTravail, 
+                        string FullName, 
+                        string DateProlangation, 
+                        string NomMedecin, 
+                        string PrenomMedecin, 
+                        string NomAr, 
+                        string PrenomAr, 
+                        string Tel, 
+                        string Addresse, 
+                        string NomCabinet, 
+                        string Specialite, 
+                        string SpecialiteAr, 
+                        string DatePrint) {
                 ArretRow rowArretRow = ((ArretRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nom,
@@ -2278,6 +2388,15 @@ namespace GC.Views.Reporting {
                         DubetTravail,
                         FullName,
                         DateProlangation,
+                        NomMedecin,
+                        PrenomMedecin,
+                        NomAr,
+                        PrenomAr,
+                        Tel,
+                        Addresse,
+                        NomCabinet,
+                        Specialite,
+                        SpecialiteAr,
                         DatePrint};
                 rowArretRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowArretRow);
@@ -2311,6 +2430,15 @@ namespace GC.Views.Reporting {
                 this.columnDubetTravail = base.Columns["DubetTravail"];
                 this.columnFullName = base.Columns["FullName"];
                 this.columnDateProlangation = base.Columns["DateProlangation"];
+                this.columnNomMedecin = base.Columns["NomMedecin"];
+                this.columnPrenomMedecin = base.Columns["PrenomMedecin"];
+                this.columnNomAr = base.Columns["NomAr"];
+                this.columnPrenomAr = base.Columns["PrenomAr"];
+                this.columnTel = base.Columns["Tel"];
+                this.columnAddresse = base.Columns["Addresse"];
+                this.columnNomCabinet = base.Columns["NomCabinet"];
+                this.columnSpecialite = base.Columns["Specialite"];
+                this.columnSpecialiteAr = base.Columns["SpecialiteAr"];
                 this.columnDatePrint = base.Columns["DatePrint"];
             }
             
@@ -2337,6 +2465,24 @@ namespace GC.Views.Reporting {
                 base.Columns.Add(this.columnFullName);
                 this.columnDateProlangation = new global::System.Data.DataColumn("DateProlangation", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDateProlangation);
+                this.columnNomMedecin = new global::System.Data.DataColumn("NomMedecin", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNomMedecin);
+                this.columnPrenomMedecin = new global::System.Data.DataColumn("PrenomMedecin", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrenomMedecin);
+                this.columnNomAr = new global::System.Data.DataColumn("NomAr", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNomAr);
+                this.columnPrenomAr = new global::System.Data.DataColumn("PrenomAr", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrenomAr);
+                this.columnTel = new global::System.Data.DataColumn("Tel", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTel);
+                this.columnAddresse = new global::System.Data.DataColumn("Addresse", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAddresse);
+                this.columnNomCabinet = new global::System.Data.DataColumn("NomCabinet", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNomCabinet);
+                this.columnSpecialite = new global::System.Data.DataColumn("Specialite", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSpecialite);
+                this.columnSpecialiteAr = new global::System.Data.DataColumn("SpecialiteAr", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSpecialiteAr);
                 this.columnDatePrint = new global::System.Data.DataColumn("DatePrint", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDatePrint);
                 this.columnDateDarret.Caption = "BilanName";
@@ -5071,6 +5217,150 @@ namespace GC.Views.Reporting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NomMedecin {
+                get {
+                    try {
+                        return ((string)(this[this.tableArret.NomMedecinColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NomMedecin\' in table \'Arret\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableArret.NomMedecinColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PrenomMedecin {
+                get {
+                    try {
+                        return ((string)(this[this.tableArret.PrenomMedecinColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PrenomMedecin\' in table \'Arret\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableArret.PrenomMedecinColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NomAr {
+                get {
+                    try {
+                        return ((string)(this[this.tableArret.NomArColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NomAr\' in table \'Arret\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableArret.NomArColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PrenomAr {
+                get {
+                    try {
+                        return ((string)(this[this.tableArret.PrenomArColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PrenomAr\' in table \'Arret\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableArret.PrenomArColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Tel {
+                get {
+                    try {
+                        return ((string)(this[this.tableArret.TelColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tel\' in table \'Arret\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableArret.TelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Addresse {
+                get {
+                    try {
+                        return ((string)(this[this.tableArret.AddresseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Addresse\' in table \'Arret\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableArret.AddresseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NomCabinet {
+                get {
+                    try {
+                        return ((string)(this[this.tableArret.NomCabinetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NomCabinet\' in table \'Arret\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableArret.NomCabinetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Specialite {
+                get {
+                    try {
+                        return ((string)(this[this.tableArret.SpecialiteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Specialite\' in table \'Arret\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableArret.SpecialiteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SpecialiteAr {
+                get {
+                    try {
+                        return ((string)(this[this.tableArret.SpecialiteArColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SpecialiteAr\' in table \'Arret\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableArret.SpecialiteArColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string DatePrint {
                 get {
                     try {
@@ -5203,6 +5493,114 @@ namespace GC.Views.Reporting {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDateProlangationNull() {
                 this[this.tableArret.DateProlangationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNomMedecinNull() {
+                return this.IsNull(this.tableArret.NomMedecinColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNomMedecinNull() {
+                this[this.tableArret.NomMedecinColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPrenomMedecinNull() {
+                return this.IsNull(this.tableArret.PrenomMedecinColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPrenomMedecinNull() {
+                this[this.tableArret.PrenomMedecinColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNomArNull() {
+                return this.IsNull(this.tableArret.NomArColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNomArNull() {
+                this[this.tableArret.NomArColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPrenomArNull() {
+                return this.IsNull(this.tableArret.PrenomArColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPrenomArNull() {
+                this[this.tableArret.PrenomArColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTelNull() {
+                return this.IsNull(this.tableArret.TelColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTelNull() {
+                this[this.tableArret.TelColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAddresseNull() {
+                return this.IsNull(this.tableArret.AddresseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAddresseNull() {
+                this[this.tableArret.AddresseColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNomCabinetNull() {
+                return this.IsNull(this.tableArret.NomCabinetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNomCabinetNull() {
+                this[this.tableArret.NomCabinetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSpecialiteNull() {
+                return this.IsNull(this.tableArret.SpecialiteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSpecialiteNull() {
+                this[this.tableArret.SpecialiteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSpecialiteArNull() {
+                return this.IsNull(this.tableArret.SpecialiteArColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSpecialiteArNull() {
+                this[this.tableArret.SpecialiteArColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

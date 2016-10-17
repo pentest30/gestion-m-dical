@@ -121,13 +121,13 @@
                                 <TextRun>
                                   <Value>- </Value>
                                   <Style>
-                                    <FontSize>12pt</FontSize>
+                                    <FontSize>11pt</FontSize>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value>=Fields!NomMedicale.Value</Value>
                                   <Style>
-                                    <FontSize>12pt</FontSize>
+                                    <FontSize>11pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -158,15 +158,21 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value xml:space="preserve">                          </Value>
+                                      <Value xml:space="preserve">                       </Value>
                                       <Style>
                                         <FontSize>12pt</FontSize>
                                       </Style>
                                     </TextRun>
                                     <TextRun>
+                                      <Value xml:space="preserve">   </Value>
+                                      <Style>
+                                        <FontSize>11pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
                                       <Value>=Fields!Qnt.Value</Value>
                                       <Style>
-                                        <FontSize>12pt</FontSize>
+                                        <FontSize>11pt</FontSize>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
@@ -504,28 +510,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Audiométrie    ,     Impédencemétrie,</Value>
-                        <Style>
-                          <FontStyle>Normal</FontStyle>
-                          <FontFamily>Cambria</FontFamily>
-                          <FontSize>12pt</FontSize>
-                          <FontWeight>Normal</FontWeight>
-                          <TextDecoration>None</TextDecoration>
-                          <Color>#0070c0</Color>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <LeftIndent>0cm</LeftIndent>
-                    <RightIndent>0cm</RightIndent>
-                    <Style>
-                      <TextAlign>Center</TextAlign>
-                      <LineHeight>13pt</LineHeight>
-                    </Style>
-                  </Paragraph>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>Fibroscopie     ,      Allergologie  ORL</Value>
+                        <Value />
                         <Style>
                           <FontStyle>Normal</FontStyle>
                           <FontFamily>Cambria</FontFamily>
@@ -566,8 +551,8 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox2</rd:DefaultName>
-                <Height>4.50674cm</Height>
-                <Width>7.92868cm</Width>
+                <Height>3.71299cm</Height>
+                <Width>7.47889cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -600,7 +585,7 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox4</rd:DefaultName>
-                <Top>4.68313cm</Top>
+                <Top>4.36563cm</Top>
                 <Left>5.21229cm</Left>
                 <Height>1.02333cm</Height>
                 <Width>4.54565cm</Width>
@@ -916,7 +901,7 @@
             <KeepTogether>true</KeepTogether>
             <Top>0.10583cm</Top>
             <Left>0.12076cm</Left>
-            <Height>5.82648cm</Height>
+            <Height>5.48252cm</Height>
             <Width>14.64625cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -931,10 +916,6 @@
           <Border>
             <Style>None</Style>
           </Border>
-          <BackgroundImage>
-            <Source>Embedded</Source>
-            <Value>orl7</Value>
-          </BackgroundImage>
         </Style>
       </Body>
       <Width>14.76701cm</Width>
@@ -1066,12 +1047,13 @@
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
               <Top>0.14111cm</Top>
-              <Left>0.68474cm</Left>
               <Height>0.6cm</Height>
               <Width>13.295cm</Width>
               <ZIndex>1</ZIndex>

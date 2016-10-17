@@ -35,7 +35,7 @@ namespace GC.Views
         public UpdateDg UpdateDataDg;
         int _seletedindex;
         private readonly IRepository<AnalysesDemande> _repositoryParaClinique;
-
+        private int _typeExamenId=-1;
         public ConsultationsView(DossierPatient patient)
         {
             _mainWindow.LoadingDecorator.IsSplashScreenShown = true;
@@ -391,12 +391,14 @@ namespace GC.Views
             }
             var list = (List<AnalysesDemande>)GridControlAnalyse.ItemsSource;
             if (list == null) return;
-            list.Add(new AnalysesDemande());
+            list.Add(new AnalysesDemande() );
+           
             GridControlAnalyse.View.FocusedRowHandle = list.Count - 1;
             var context = list.Last();
             context.ConsultationId = consult.Id;
-            
+           
             ExamenParaCliniqueGrid.DataContext =context;
+            if (_typeExamenId > -1) CbTypeAnalyse.SelectedIndex = _typeExamenId;
             ExamenParaCliniqueGrid.IsEnabled = true;
         }
 
@@ -506,6 +508,8 @@ namespace GC.Views
             }
             var sources = new List<OrdenanceVm>();
             var ord = new OrdenanceVm();
+            var repo = _mainWindow.AutofacBootStrap.RepositoryCabinet();
+            var cab = repo.Query().FirstOrDefault();
 
             ord.Nom = item.Patient.Nom;
             ord.Prenom = item.Patient.Prenom;
@@ -516,6 +520,19 @@ namespace GC.Views
             if (!string.IsNullOrWhiteSpace(item.DureeProlangee)) ord.DateProlangation = item.Date;
             ord.DubetTravail = item.DubeterTravail;
             ord.Age = item.Patient.Age;
+            if (cab != null)
+            {
+                ord.NomCabinet = cab.NomCabinet;
+                ord.NomMedecin = cab.NomMedecin;
+                ord.PrenomMedecin = cab.PrenomMedecin;
+                ord.NomAr = cab.NomAr;
+                ord.PrenomAr = cab.PrenomAr;
+                ord.Tel = cab.Tel;
+                ord.Addresse = cab.Addresse;
+                ord.Specialite = cab.Specialite;
+                ord.SpecialiteAr = cab.SpecialiteAr;
+
+            }
             sources.Add(ord);
             var frm = new ReportingArretview(sources);
             frm.Show();
@@ -716,7 +733,7 @@ namespace GC.Views
 
         private void CbTypeAnalyse_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           
+            _typeExamenId = CbTypeAnalyse.SelectedIndex;
         }
 
         private void CancelTreatCommand_OnItemClick(object sender, ItemClickEventArgs e)

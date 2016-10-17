@@ -17,13 +17,12 @@
           
             <StackPanel Orientation="Horizontal">
                 <dxb:ToolBarControl Height="35">
-                    <dxb:BarButtonItem  BarItemDisplayMode="ContentAndGlyph" Content="Nouveau" ItemClick="BarItem_OnItemClick"  Glyph="{dx:DXImage Image=New_16x16.png}"/>
+                    <dxb:BarButtonItem  BarItemDisplayMode="ContentAndGlyph" Content="Nouveau patient" ItemClick="BarItem_OnItemClick"  Glyph="{dx:DXImage Image=New_16x16.png}"/>
                     <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Modifier" Name="EditCommand" ItemClick="EditCommand_OnItemClick"      CommandParameter="{Binding SelectedEntity}" Glyph="{dx:DXImage Image=Edit_16x16.png}"/>
                     <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Supprimer" Name="DeleteCommand" ItemClick="DeleteCommand_OnItemClick" CommandParameter="{Binding SelectedEntity}" Glyph="{dx:DXImage Image=Delete_16x16.png}"/>
                     <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Actualiser" Name="RefreshBtn" ItemClick="RefreshBtn_OnItemClick" Glyph="{dx:DXImage Image=Refresh_16x16.png}"/>
                     <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Dossier médical" Name="DetailsBtn" ItemClick="DetailsBtn_OnItemClick" Glyph="{dx:DXImage Image=EditTask_16x16.png}"  />
-                    <dxb:BarButtonItem BarItemDisplayMode="ContentAndGlyph" Content="Examen d'audition" Name="SurditeTestBtn" ItemClick="SurditeTestBtn_OnItemClick" Glyph="{dx:DXImage Image=ChangeChartSeriesType_32x32.png}"  />
-
+                   
                 </dxb:ToolBarControl>
                 <ComboBox Margin="3" Height="25" Width="200" Name="CbTypeSearch">
                     <ComboBoxItem>Recherche par Défaut</ComboBoxItem>
